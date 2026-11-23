@@ -91,18 +91,18 @@
   },
   {
    "title": "N8 · plan 16 · les treize, ensemble",
-   "note": "Numéros de dimanche : 1 Kilian … 13 Erwann. Visages visibles.",
-   "text": "Modern Japanese sports anime style, clean cel shading, bold ink outlines, expressive eyes, dramatic lighting, rich saturated colors, subtle film grain, vertical 9:16 format, no text, no logos, no brand marks. Use the 13 reference photos I gave you, each one matching its jersey number. Team photo at the end of a rainy Sunday match: EXACTLY 13 players, all fully visible, all faces clearly visible and recognizable, no other people. Plain black football jerseys with white numbers on the chest, black shorts, black socks, no sponsor, no crest; the goalkeeper wears a green long-sleeve jersey. BACK ROW, standing, from left to right: number 1 KILIAN (goalkeeper, green jersey), number 2 JOHNNY, number 3 FREDO, number 4 NICO, number 5 KEVIN, number 6 SAMUEL, number 7 JO. FRONT ROW, kneeling, from left to right: number 8 VINCENT, number 9 AYRTON, number 10 TOM in the center, number 11 THOMAS, number 12 SELBA, number 13 ERWANN. Each player wears only his own number. They are soaked and muddy, arms around each other's shoulders, exhausted but proud, heads high; Tom and Erwann have an ice pack strapped to their thigh. Wet pitch, light rain, golden light breaking through grey clouds behind them, emotional and heroic, front view, wide enough to show all 13."
+   "note": "Fait ✓",
+   "text": "(déjà générée)"
   },
   {
    "title": "N9 · plan 13 · l'infirmerie affiche complet",
-   "note": "Numéros de dimanche : Selba 12, Erwann 13.",
-   "text": "Modern Japanese sports anime style, clean cel shading, bold ink outlines, expressive eyes, dramatic lighting, rich saturated colors, subtle film grain, vertical 9:16 format, no text, no logos, no brand marks. Our team wears plain black football jerseys with white numbers on the chest, black shorts, black socks, no sponsor, no crest. Use exactly the faces of SELBA (number 12) and ERWANN (number 13) from the photos I gave you. Comic anime scene on the substitutes' bench beside a wet pitch: Erwann, number 13, sits with an ice pack on the back of his thigh, and next to him Selba, number 12, holds an ice pack on his knee. Both have exaggerated comic despair: anime tear streams, a dark gloomy aura above their heads, an open first-aid kit between them. Grey sky, humorous mood."
+   "note": "Fait ✓",
+   "text": "(déjà générée)"
   },
   {
    "title": "N10 · plan 15 · le bord du terrain",
-   "note": "Pas de portrait de David : il est de dos.",
-   "text": "Modern Japanese sports anime style, clean cel shading, bold ink outlines, expressive eyes, dramatic lighting, rich saturated colors, subtle film grain, vertical 9:16 format, no text, no logos, no brand marks. Use exactly the faces of FRANÇOIS and TONY from the portraits I gave you earlier. The sideline of a wet football pitch on a grey Sunday morning. On the left, François, wearing a dark rain jacket over a black shirt, stands straight like a proud soldier and raises an assistant referee's flag along the touchline. In the middle, Tony sits on the substitutes' bench in a black team jacket, filming the match with his smartphone in one hand and cheering with his other fist raised. On the right, a tall supporter in a dark hoodie, seen from behind with his face not visible, raises both arms and cheers loudly. Players in black and dark red blurred on the pitch in the background. Warm, heartfelt, slightly humorous mood."
+   "note": "Fait ✓",
+   "text": "(déjà générée)"
   }
  ],
  "plans": [
@@ -157,7 +157,7 @@
    "voice": "[tense] Le terrain fuse. Le ballon glisse. Ils veulent ressortir court… [short pause] et le bloc se coupe en deux."
   },
   {
-   "image": "assets/pilot/15.jpg",
+   "image": "assets/pilot/15_sans_horloge.jpg",
    "kind": "reuse",
    "screen": "Rappel d'Herblay : le coup franc au-dessus du mur (pilote 15). 0-1 à l'écran.",
    "lines": [
@@ -292,7 +292,10 @@
   {
    "image": "N10.jpg",
    "kind": "new",
-   "opts": {},
+   "opts": {
+    "n": 1,
+    "zoom": 0.04
+   },
    "screen": "N10 · Le bord du terrain : François au drapeau de touche, Tony sur le banc qui filme et encourage, David de dos qui pousse les Pingouins.",
    "lines": [
     "Sur le bord du terrain, ils sont là aussi.",
