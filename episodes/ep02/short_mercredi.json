@@ -1,0 +1,32 @@
+{
+ "type": "short",
+ "title": "Joueur de la semaine : Kevin",
+ "output": "Les_Pingouins_joueur_Kevin.mp4",
+ "music": {
+  "start": 51.9
+ },
+ "plans": [
+  {
+   "image": "assets/pilot/07.jpg",
+   "lines": [
+    "Joueur de la semaine.",
+    "!! KEVIN",
+    "Le Soldat absolu.",
+    "Une condition physique hors norme…",
+    "et une seule phrase en tête :",
+    "!! ON MONTE !"
+   ],
+   "opts": {}
+  },
+  {
+   "image": "assets/pilot/08.jpg",
+   "lines": [
+    "Chaque mercredi, un Pingouin à l'honneur.",
+    "@lespingouinscdm"
+   ],
+   "opts": {
+    "n": 1
+   }
+  }
+ ]
+}

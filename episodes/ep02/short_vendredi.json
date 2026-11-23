@@ -1,0 +1,46 @@
+{
+ "type": "short",
+ "title": "Avant-match J6 Cosmo Taverny",
+ "output": "Les_Pingouins_avant-match_J6.mp4",
+ "music": {
+  "start": 51.9
+ },
+ "plans": [
+  {
+   "image": "assets/pilot/01.jpg",
+   "lines": [
+    "Après Eaubonne…",
+    "les Pingouins ont une revanche à prendre."
+   ],
+   "opts": {
+    "n": 1
+   }
+  },
+  {
+   "image": "assets/pilot/02.jpg",
+   "lines": [
+    "Prochain combat :",
+    "!! TAVERNY"
+   ],
+   "opts": {}
+  },
+  {
+   "image": "assets/pilot/07.jpg",
+   "lines": [
+    "Dimanche 29 novembre. À l'extérieur.",
+    "!! Kevin : ON MONTE !"
+   ],
+   "opts": {}
+  },
+  {
+   "image": "assets/pilot/18.jpg",
+   "lines": [
+    "Épisode 3 lundi, 18h.",
+    "@lespingouinscdm"
+   ],
+   "opts": {
+    "n": 1
+   }
+  }
+ ]
+}

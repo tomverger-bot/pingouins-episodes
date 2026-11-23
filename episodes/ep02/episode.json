@@ -1,0 +1,163 @@
+{
+ "episode": 2,
+ "title": "Eaubonne",
+ "match": "J5 22/11/2026 Pierrelaye 2-3 Eaubonne",
+ "voice": "voix.mp3",
+ "output": "Les_Pingouins_E02.mp4",
+ "music": {
+  "file": "assets/music/run_toward_tomorrow.mp3",
+  "start": 0
+ },
+ "cover": {
+  "image": "N4.jpg",
+  "kicker": "ÉPISODE 2",
+  "title": "Eaubonne",
+  "subtitle": "Le lob du Petit",
+  "output": "couverture_E02.jpg"
+ },
+ "plans": [
+  {
+   "image": "N4.jpg",
+   "lines": [
+    "Trente-cinq mètres…",
+    "Le Petit vient de lober le gardien.",
+    "Mais ce dimanche… un miracle ne suffira pas."
+   ],
+   "voice": "[whispers] Trente-cinq mètres… [dramatic] Le Petit vient de lober le gardien. [serious] Mais ce dimanche… un miracle ne suffira pas.",
+   "opts": {}
+  },
+  {
+   "image": "assets/pilot/17.jpg",
+   "lines": [
+    "Précédemment… menés à Saint-Leu,",
+    "les Pingouins arrachent un 3 partout."
+   ],
+   "voice": "[mysterious] Précédemment… menés à Saint-Leu, les Pingouins arrachent un trois partout.",
+   "opts": {}
+  },
+  {
+   "image": "assets/pilot/01.jpg",
+   "lines": [
+    "22 novembre. Pierrelaye.",
+    "Eaubonne vient défier les Pingouins… à la maison."
+   ],
+   "voice": "[dramatic] Vingt-deux novembre. Pierrelaye. Eaubonne vient défier les Pingouins… à la maison.",
+   "opts": {
+    "n": 1
+   }
+  },
+  {
+   "image": "N1.jpg",
+   "lines": [
+    "Le terrain fuse. Le ballon glisse.",
+    "Ils veulent ressortir court…",
+    "et le bloc se coupe en deux."
+   ],
+   "voice": "[tense] Le terrain fuse. Le ballon glisse. Ils veulent ressortir court… [short pause] et le bloc se coupe en deux.",
+   "opts": {
+    "shake": 1
+   }
+  },
+  {
+   "image": "assets/pilot/15.jpg",
+   "lines": [
+    "Et puis… un coup franc.",
+    "Encore un.",
+    "!! 0-1"
+   ],
+   "voice": "[serious] Et puis… un coup franc. [whispers] Encore un. [dramatic] Zéro à un.",
+   "opts": {}
+  },
+  {
+   "image": "assets/pilot/03.jpg",
+   "lines": [
+    "Tom change le plan.",
+    "Tom : Dégagez sur moi !"
+   ],
+   "voice": "[determined] Tom change le plan. [shouting] Dégagez sur moi !",
+   "opts": {}
+  },
+  {
+   "image": "N2.jpg",
+   "lines": [
+    "Kevin dégage. Tom dévie de la tête…",
+    "Thomas s'envole dans la profondeur !"
+   ],
+   "voice": "[excited] Kevin dégage. Tom dévie de la tête… Thomas s'envole dans la profondeur !",
+   "opts": {}
+  },
+  {
+   "image": "N3.jpg",
+   "lines": [
+    "Centre au second poteau. Le gardien repousse…",
+    "mais Speedy a tout suivi.",
+    "Personne ne l'a vu passer.",
+    "!! 1-1"
+   ],
+   "voice": "[excited] Centre au second poteau. Le gardien repousse… [short pause] mais Speedy a tout suivi. Personne ne l'a vu passer. [shouting] Un partout !",
+   "opts": {}
+  },
+  {
+   "image": "N4.jpg",
+   "lines": [
+    "Deuxième mi-temps. Ayrton. Le Petit.",
+    "Le plus jeune de l'équipage… et il n'a peur de rien.",
+    "Trente-cinq mètres. Lob.",
+    "!! 2-1"
+   ],
+   "voice": "[dramatic] Deuxième mi-temps. Ayrton. Le Petit. [whispers] Le plus jeune de l'équipage… et il n'a peur de rien. [intense] Trente-cinq mètres. Lob. [shouting] Deux à un !",
+   "opts": {}
+  },
+  {
+   "image": "N5.jpg",
+   "lines": [
+    "Mais les corps lâchent.",
+    "Un claquage… puis un autre.",
+    "Tom lui-même s'écroule.",
+    "Six dernières minutes… deux buts.",
+    "!! 2-3"
+   ],
+   "voice": "[tense] Mais les corps lâchent. Un claquage… puis un autre. Tom lui-même s'écroule. [sad] Six dernières minutes… deux buts. Deux à trois.",
+   "opts": {
+    "heart": 1
+   }
+  },
+  {
+   "image": "assets/portraits/francois.jpg",
+   "lines": [
+    "Sur le bord du terrain, François, le vétéran.",
+    "Blessé… mais toujours là.",
+    "Drapeau à la main, il fait la touche."
+   ],
+   "voice": "[amused] Sur le bord du terrain, François, le vétéran. Blessé… mais toujours là. Drapeau à la main, il fait la touche.",
+   "opts": {
+    "n": 1
+   }
+  },
+  {
+   "image": "assets/pilot/08.jpg",
+   "lines": [
+    "Défaite. Mais personne n'a lâché.",
+    "Les Pingouins tombent ensemble…",
+    "et se relèvent ensemble."
+   ],
+   "voice": "[proud] Défaite. Mais personne n'a lâché. [whispers] Les Pingouins tombent ensemble… et se relèvent ensemble.",
+   "opts": {
+    "n": 1
+   }
+  },
+  {
+   "image": "assets/pilot/18.jpg",
+   "lines": [
+    "Prochain chapitre : Cosmo Taverny.",
+    "Dimanche 29 novembre.",
+    "Si t'as kiffé, like et abonne-toi.",
+    "On se retrouve au prochain épisode."
+   ],
+   "voice": "[dramatic] Prochain chapitre : Cosmo Taverny. Dimanche vingt-neuf novembre. [short pause] [excited] Si t'as kiffé, like et abonne-toi. [whispers] On se retrouve au prochain épisode.",
+   "opts": {
+    "n": 1
+   }
+  }
+ ]
+}

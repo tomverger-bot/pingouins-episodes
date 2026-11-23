@@ -1,0 +1,231 @@
+{
+ "episode": 1,
+ "title": "Saison 1",
+ "match": "pilote",
+ "voice": "voix.mp3",
+ "output": "Les_Pingouins_E01.mp4",
+ "music": {
+  "file": "assets/music/run_toward_tomorrow.mp3",
+  "start": 0.77
+ },
+ "cover": {
+  "image": "assets/pilot/08.jpg",
+  "kicker": "ÉPISODE 1",
+  "title": "Les Pingouins",
+  "subtitle": "La légende du dimanche matin",
+  "output": "couverture_E01.jpg"
+ },
+ "plans": [
+  {
+   "image": "assets/pilot/01.jpg",
+   "lines": [
+    "Dimanche, 8 h 30. Val-d'Oise.",
+    "Pendant que la ville dort…",
+    "une légende du district se réveille."
+   ],
+   "voice": "[serious] Dimanche. [short pause] Huit heures trente. [short pause] Val-d'Oise. [whispers] Pendant que la ville dort… [dramatic] une légende du district se réveille.",
+   "opts": {}
+  },
+  {
+   "image": "assets/pilot/02.jpg",
+   "lines": [
+    "Les Pingouins de Pierrelaye.",
+    "Dix-neuf potes,",
+    "dont la moitié n'a jamais joué à onze."
+   ],
+   "voice": "[proud] Les Pingouins de Pierrelaye. [short pause] Dix-neuf potes… [amused] dont la moitié n'a jamais joué à onze.",
+   "opts": {}
+  },
+  {
+   "image": "assets/pilot/03.jpg",
+   "lines": [
+    "À leur tête : Tom.",
+    "Joueur, coach, numéro 10.",
+    "Tom : Les gars… on va faire simple."
+   ],
+   "voice": "[dramatic] À leur tête : Tom. [short pause] Joueur. Coach. Numéro dix. [calm] Les gars… on va faire simple.",
+   "opts": {}
+  },
+  {
+   "image": "assets/pilot/04.jpg",
+   "lines": [
+    "Sa technique interdite tient en trois lignes :",
+    "on souffre ensemble,",
+    "on joue simple,",
+    "on frappe vite."
+   ],
+   "voice": "[mysterious] Sa technique interdite tient en trois lignes. [short pause] [intense] On souffre ensemble. On joue simple. On frappe vite.",
+   "opts": {}
+  },
+  {
+   "image": "assets/pilot/05.jpg",
+   "lines": [
+    "Certains ont vingt ans de foot dans les jambes.",
+    "D'autres… vingt minutes.",
+    "Ici, tout le monde joue."
+   ],
+   "voice": "[amused] Certains ont vingt ans de foot dans les jambes. D'autres… [short pause] vingt minutes. [serious] Ici, tout le monde joue.",
+   "opts": {}
+  },
+  {
+   "image": "assets/pilot/06.jpg",
+   "lines": [
+    "Pas le même niveau.",
+    "Mais la même envie…",
+    "et les mêmes courbatures le lundi."
+   ],
+   "voice": "Pas le même niveau. [short pause] Mais la même envie… [laughs] et les mêmes courbatures le lundi.",
+   "opts": {}
+  },
+  {
+   "image": "assets/pilot/07.jpg",
+   "lines": [
+    "Une défense qui monte d'une seule voix :",
+    "!! Kevin : ON MONTE !"
+   ],
+   "voice": "[intense] Une défense qui monte d'une seule voix : [shouting] ON MONTE !",
+   "opts": {}
+  },
+  {
+   "image": "assets/pilot/08.jpg",
+   "lines": [
+    "L'équipage au complet :",
+    "François, Kilian, Nico, Kevin,",
+    "Johnny, Samuel, Fredo, Erwann,",
+    "Vincent, Keanu, Jehan,",
+    "Nicolas, Selba,",
+    "Jo, Thomas, Joachim,",
+    "Ayrton, Tony."
+   ],
+   "voice": "[excited] L'équipage au complet : François, Kilian, Nico, Kevin, Johnny, Samuel, Fredo, Erwann, Vincent, Kénou, Jehan, Nicolas, Selba, Jo, Thomas, Joachim, Ayrton, Tony.",
+   "opts": {
+    "n": 1
+   }
+  },
+  {
+   "image": "assets/pilot/09.jpg",
+   "lines": [
+    "4 octobre. Premier match, à Pontoise.",
+    "!! 7-1",
+    "Observateur : C'est qui, ces Pingouins ?!"
+   ],
+   "voice": "[dramatic] Quatre octobre. Premier match, à Pontoise. [short pause] [excited] Sept à un ! [shouting] C'est qui, ces Pingouins ?!",
+   "opts": {}
+  },
+  {
+   "image": "assets/pilot/10.jpg",
+   "lines": [
+    "Mais le district ne pardonne pas.",
+    "Contre SG AS, le bloc se fissure…",
+    "!! 0-5",
+    "Et François tombe.",
+    "Jo : T'inquiète, je t'ai gardé une place à l'infirmerie."
+   ],
+   "voice": "[serious] Mais le district ne pardonne pas. Contre SG AS, le bloc se fissure… [short pause] Zéro à cinq. [sad] Et François tombe. [short pause] [amused] T'inquiète… je t'ai gardé une place à l'infirmerie.",
+   "opts": {
+    "shake": 1,
+    "thunder": 1,
+    "rain": 1
+   }
+  },
+  {
+   "image": "assets/pilot/11.jpg",
+   "lines": [
+    "En amical, ils défient le leader de la division du dessus.",
+    "!! 2-9",
+    "Observateur : Ils n'avaient aucune chance…"
+   ],
+   "voice": "[dramatic] En amical, ils défient le leader de la division du dessus. [short pause] Deux à neuf. [sighs] Ils n'avaient aucune chance…",
+   "opts": {
+    "shake": 1,
+    "rain": 1
+   }
+  },
+  {
+   "image": "assets/pilot/12.jpg",
+   "lines": [
+    "Alors, mardi et jeudi, sous les projecteurs,",
+    "ils apprennent la technique secrète :",
+    "!! REGARDER",
+    "!! ARRÊTER",
+    "!! ORIENTER",
+    "!! PASSER",
+    "Vincent, lui… attend dimanche."
+   ],
+   "voice": "[determined] Alors, mardi et jeudi, sous les projecteurs, ils apprennent la technique secrète. [intense] Regarder. [short pause] Arrêter. [short pause] Orienter. [short pause] Passer. [amused] Vincent, lui… attend dimanche.",
+   "opts": {}
+  },
+  {
+   "image": "assets/pilot/13.jpg",
+   "lines": [
+    "1er novembre, Herblay.",
+    "Débordés pendant vingt-cinq minutes,",
+    "Tom recule d'un cran…",
+    "et voit la faille."
+   ],
+   "voice": "[tense] Premier novembre, Herblay. Débordés pendant vingt-cinq minutes… [whispers] Tom recule d'un cran… [dramatic] et voit la faille.",
+   "opts": {
+    "n": 1,
+    "zoom": 0.16,
+    "heart": 1
+   }
+  },
+  {
+   "image": "assets/pilot/14.jpg",
+   "lines": [
+    "Une passe dans le dos de la défense.",
+    "Thomas fixe le gardien…",
+    "!! 1-0"
+   ],
+   "voice": "[excited] Une passe dans le dos de la défense. Thomas fixe le gardien… [shouting] UN À ZÉRO !",
+   "opts": {}
+  },
+  {
+   "image": "assets/pilot/15.jpg",
+   "lines": [
+    "Mais à la 94e minute…",
+    "coup franc.",
+    "!! 1-1",
+    "Observateur : Le temps… voilà le vrai boss de fin."
+   ],
+   "voice": "[tense] Mais à la quatre-vingt-quatorzième minute… coup franc. [short pause] Un partout. [whispers] Le temps… [dramatic] voilà le vrai boss de fin.",
+   "opts": {}
+  },
+  {
+   "image": "assets/pilot/16.jpg",
+   "lines": [
+    "15 novembre, Saint-Leu. Les Pingouins sont menés.",
+    "Dans les cages, Kilian.",
+    "Trois semaines plus tôt, il n'avait jamais joué à onze.",
+    "Kilian : Pas aujourd'hui."
+   ],
+   "voice": "[serious] Quinze novembre, Saint-Leu. Les Pingouins sont menés. Dans les cages : Kilian. [whispers] Trois semaines plus tôt, il n'avait jamais joué à onze. [determined] Pas aujourd'hui.",
+   "opts": {}
+  },
+  {
+   "image": "assets/pilot/17.jpg",
+   "lines": [
+    "Les Pingouins reviennent…",
+    "!! 3-3",
+    "Pas de victoire…",
+    "mais un équipage qui ne lâche plus rien.",
+    "Tom : On n'a encore rien montré."
+   ],
+   "voice": "[excited] Les Pingouins reviennent… [shouting] Trois partout ! [proud] Pas de victoire… mais un équipage qui ne lâche plus rien. [whispers] On n'a encore rien montré.",
+   "opts": {}
+  },
+  {
+   "image": "assets/pilot/18.jpg",
+   "lines": [
+    "Prochain chapitre : Eaubonne.",
+    "Dimanche 22 novembre, 9 h 30, à la maison.",
+    "Si t'as kiffé, like et abonne-toi.",
+    "On se retrouve au prochain épisode."
+   ],
+   "voice": "[dramatic] Prochain chapitre : Eaubonne. Dimanche vingt-deux novembre, neuf heures trente. À la maison. [short pause] [excited] Si t'as kiffé, like et abonne-toi. [whispers] On se retrouve au prochain épisode.",
+   "opts": {
+    "n": 1
+   }
+  }
+ ]
+}

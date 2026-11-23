@@ -1,0 +1,6 @@
+work/
+work_*/
+episodes/*/work*/
+*.mp4
+*.wav
+__pycache__/
