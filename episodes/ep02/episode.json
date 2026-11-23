@@ -78,12 +78,23 @@
    "opts": {}
   },
   {
+   "image": "N6.jpg",
+   "lines": [
+    "Kevin s'en charge.",
+    "Un six mètres… puis deux… puis trois…",
+    "!! × 20",
+    "Le Soldat absolu a même la jambe absolue."
+   ],
+   "voice": "[amused] Kevin s'en charge. Un six mètres… puis deux… puis trois… [laughs] Une vingtaine dans le match. [proud] Le Soldat absolu a même la jambe absolue.",
+   "opts": {}
+  },
+  {
    "image": "N2.jpg",
    "lines": [
-    "Kevin dégage. Tom dévie de la tête…",
+    "Et sur l'un d'eux… Tom dévie de la tête…",
     "Thomas s'envole dans la profondeur !"
    ],
-   "voice": "[excited] Kevin dégage. Tom dévie de la tête… Thomas s'envole dans la profondeur !",
+   "voice": "[excited] Et sur l'un d'eux… Tom dévie de la tête… Thomas s'envole dans la profondeur !",
    "opts": {}
   },
   {
