@@ -103,6 +103,11 @@
    "title": "N10 · plan 15 · le bord du terrain",
    "note": "Fait ✓",
    "text": "(déjà générée)"
+  },
+  {
+   "title": "N11 · plan 12 · Jo à 21 km/h",
+   "note": "Fait ✓",
+   "text": "(déjà générée)"
   }
  ],
  "plans": [
@@ -244,12 +249,10 @@
    "opts": {}
   },
   {
-   "image": "assets/portraits/jo_visage.jpg",
-   "kind": "reuse",
-   "opts": {
-    "n": 1
-   },
-   "screen": "Portrait de Jo le Chauve. « 21 km/h » à l'écran.",
+   "image": "N11.jpg",
+   "kind": "new",
+   "opts": {},
+   "screen": "N11 · Jo (7) sprinte de toutes ses forces, cuisse bandée, pendant qu'un adversaire le suit en trottinant. « 21 km/h » à l'écran.",
    "lines": [
     "Devant, Jo le Chauve.",
     "Pointe de vitesse enregistrée :",
