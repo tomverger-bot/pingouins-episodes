@@ -98,6 +98,11 @@
    "title": "N9 · plan 13 · l'infirmerie affiche complet",
    "note": "Pas de portrait de Selba : il est de profil, visage caché.",
    "text": "Modern Japanese sports anime style, clean cel shading, bold ink outlines, expressive eyes, dramatic lighting, rich saturated colors, subtle film grain, vertical 9:16 format, no text, no logos, no brand marks. Our team wears plain black football jerseys with white numbers on the chest, black shorts, black socks, no sponsor, no crest. Opponents wear plain dark red jerseys. Use exactly the face of ERWANN (number 17) from the portrait I gave you earlier. Comic anime scene on the substitutes' bench beside a wet pitch: Erwann, number 17, sits with an ice pack on the back of his thigh, and next to him a teammate in black with number 15, seen in profile with his face hidden in his hands, holds an ice pack on his knee. Both have exaggerated comic despair: anime tear streams, a dark gloomy aura above their heads, an open first-aid kit between them. Grey sky, humorous mood."
+  },
+  {
+   "title": "N10 · plan 15 · le bord du terrain",
+   "note": "Pas de portrait de David : il est de dos.",
+   "text": "Modern Japanese sports anime style, clean cel shading, bold ink outlines, expressive eyes, dramatic lighting, rich saturated colors, subtle film grain, vertical 9:16 format, no text, no logos, no brand marks. Use exactly the faces of FRANÇOIS and TONY from the portraits I gave you earlier. The sideline of a wet football pitch on a grey Sunday morning. On the left, François, wearing a dark rain jacket over a black shirt, stands straight like a proud soldier and raises an assistant referee's flag along the touchline. In the middle, Tony sits on the substitutes' bench in a black team jacket, filming the match with his smartphone in one hand and cheering with his other fist raised. On the right, a tall supporter in a dark hoodie, seen from behind with his face not visible, raises both arms and cheers loudly. Players in black and dark red blurred on the pitch in the background. Warm, heartfelt, slightly humorous mood."
   }
  ],
  "plans": [
@@ -285,18 +290,20 @@
    "voice": "[sad] Et Tom lui-même s'écroule. Six dernières minutes… deux buts. Deux à trois."
   },
   {
-   "image": "assets/portraits/francois.jpg",
-   "kind": "reuse",
-   "opts": {
-    "n": 1
-   },
-   "screen": "François, le vétéran (portrait).",
+   "image": "N10.jpg",
+   "kind": "new",
+   "opts": {},
+   "screen": "N10 · Le bord du terrain : François au drapeau de touche, Tony sur le banc qui filme et encourage, David de dos qui pousse les Pingouins.",
    "lines": [
-    "Sur le bord du terrain, François, le vétéran.",
-    "Blessé… mais toujours là.",
-    "Drapeau à la main, il fait la touche."
+    "Sur le bord du terrain, ils sont là aussi.",
+    "François, le vétéran, blessé…",
+    "mais drapeau à la main, il fait la touche.",
+    "Tony, blessé lui aussi,",
+    "filme et encourage depuis le banc.",
+    "Et David, le grand frère de Tony et Jo,",
+    "toujours là pour pousser les Pingouins."
    ],
-   "voice": "[amused] Sur le bord du terrain, François, le vétéran. Blessé… mais toujours là. Drapeau à la main, il fait la touche."
+   "voice": "[proud] Sur le bord du terrain, ils sont là aussi. François, le vétéran, blessé… mais drapeau à la main, il fait la touche. [amused] Tony, blessé lui aussi, filme et encourage depuis le banc. [proud] Et David, le grand frère de Tony et Jo, toujours là pour pousser les Pingouins."
   },
   {
    "image": "N8.jpg",
