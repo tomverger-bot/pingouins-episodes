@@ -6,7 +6,7 @@
  "output": "Les_Pingouins_E02.mp4",
  "kicker": "FC Pierrelaye CDM · J5 · dimanche 22 novembre 2026",
  "motto": "« Les Pingouins tombent ensemble… et se relèvent ensemble. »",
- "next": "Épisode 3 : Cosmo Taverny · dimanche 29 novembre · à l'extérieur",
+ "next": "Épisode 3 : Cosmo Taverny · dimanche 29 novembre · 9h30 · à l'extérieur",
  "music": {
   "file": "assets/music/run_toward_tomorrow.mp3",
   "start": 0
@@ -165,7 +165,7 @@
     "Encore un.",
     "!! 0-1"
    ],
-   "voice": "[serious] Et puis… un coup franc. [whispers] Encore un. [dramatic] Zéro à un.",
+   "voice": "[serious] Et puis… un coup franc. [Dramatic] Encore un. [dramatic] Zéro à un.",
    "opts": {}
   },
   {
@@ -209,11 +209,11 @@
    "screen": "N3 · Sam (6) surgit au second poteau et pousse le ballon au fond. 1-1 à l'écran.",
    "lines": [
     "Centre au second poteau. Le gardien repousse…",
-    "mais Speedy a tout suivi.",
+    "mais Samuel a tout suivi.",
     "Personne ne l'a vu passer.",
     "!! 1-1"
    ],
-   "voice": "[excited] Centre au second poteau. Le gardien repousse… [short pause] mais Speedy a tout suivi. Personne ne l'a vu passer. [shouting] Un partout !",
+   "voice": "[excited] Centre au second poteau. Le gardien repousse… [short pause] mais Samuel a tout suivi. Personne ne l'a vu passer. [shouting] Un partout !",
    "opts": {}
   },
   {
@@ -240,7 +240,7 @@
     "Trente-cinq mètres. Lob.",
     "!! 2-1"
    ],
-   "voice": "[dramatic] Deuxième mi-temps. Ayrton. Le Petit. [whispers] Le plus jeune de l'équipage… et il n'a peur de rien. [intense] Trente-cinq mètres. Lob. [shouting] Deux à un !",
+   "voice": "[dramatic] Deuxième mi-temps. Airton. Le Petit. [whispers] Le plus jeune de l'équipage… et il n'a peur de rien. [intense] Trente-cinq mètres. Lob. [shouting] Deux à un !",
    "opts": {}
   },
   {
@@ -254,10 +254,9 @@
     "Devant, Jo le Chauve.",
     "Pointe de vitesse enregistrée :",
     "!! 21 km/h",
-    "D'habitude, il dépasse les 30.",
     "Ce dimanche… il jouait avec une seule jambe."
    ],
-   "voice": "[dramatic] Devant, Jo le Chauve. [serious] Pointe de vitesse enregistrée : vingt et un kilomètres-heure. [whispers] D'habitude, il dépasse les trente. [amused] Ce dimanche… il jouait avec une seule jambe."
+   "voice": "[dramatic] Devant, Jo le Chauve. [serious] Pointe de vitesse enregistrée : vingt et un kilomètres-heure. [dramatic] Ce dimanche… il jouait avec une seule jambe."
   },
   {
    "image": "N9.jpg",
@@ -303,10 +302,10 @@
     "mais drapeau à la main, il fait la touche.",
     "Tony, blessé lui aussi,",
     "filme et encourage depuis le banc.",
-    "Et David, le grand frère de Tony et Jo,",
+    "Et David,",
     "toujours là pour pousser les Pingouins."
    ],
-   "voice": "[proud] Sur le bord du terrain, ils sont là aussi. François, le vétéran, blessé… mais drapeau à la main, il fait la touche. [amused] Tony, blessé lui aussi, filme et encourage depuis le banc. [proud] Et David, le grand frère de Tony et Jo, toujours là pour pousser les Pingouins."
+   "voice": "[proud] Sur le bord du terrain, ils sont là aussi. François, le vétéran, blessé… mais drapeau à la main, il fait la touche. [amused] Tony, blessé lui aussi, filme et encourage depuis le banc. [proud] Et David, toujours là pour pousser les Pingouins."
   },
   {
    "image": "N8.jpg",
@@ -323,7 +322,7 @@
     "Les Pingouins tombent ensemble…",
     "et se relèvent ensemble."
    ],
-   "voice": "[proud] Défaite. Mais personne n'a lâché. [dramatic] Kilian. Fredo. Nico. Kevin. Johnny. Erwann. Sam. Vincent. Tom. Ayrton. Jo. Thomas. Selba. [whispers] Les Pingouins tombent ensemble… et se relèvent ensemble."
+   "voice": "[proud] Défaite. Mais personne n'a lâché. [dramatic] Kilian. Fredo. Nico. Kevin. Johnny. Erwann. Sam. Vincent. Tom. Airton. Jo. Thomas. Selba. [dramatic] Les Pingouins tombent ensemble… et se relèvent ensemble."
   },
   {
    "image": "assets/pilot/18.jpg",
@@ -334,11 +333,11 @@
    "screen": "Le stade de Pierrelaye au soleil (pilote 18). PROCHAIN CHAPITRE : COSMO TAVERNY · 29/11.",
    "lines": [
     "Prochain chapitre : Cosmo Taverny.",
-    "Dimanche 29 novembre.",
+    "Dimanche 29 novembre. 9h30.",
     "Si t'as kiffé, like et abonne-toi.",
     "On se retrouve au prochain épisode."
    ],
-   "voice": "[dramatic] Prochain chapitre : Cosmo Taverny. Dimanche vingt-neuf novembre. [short pause] [excited] Si t'as kiffé, like et abonne-toi. [whispers] On se retrouve au prochain épisode."
+   "voice": "[dramatic] Prochain chapitre : Cosmo Taverny. Dimanche vingt-neuf novembre. 9h30. [short pause] [excited] Si t'as kiffé, like et abonne-toi. [whispers] On se retrouve au prochain épisode."
   }
  ]
 }
