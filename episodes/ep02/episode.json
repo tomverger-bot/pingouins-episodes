@@ -4,6 +4,9 @@
  "match": "J5 22/11/2026 Pierrelaye 2-3 Eaubonne",
  "voice": "voix.mp3",
  "output": "Les_Pingouins_E02.mp4",
+ "kicker": "FC Pierrelaye CDM · J5 · dimanche 22 novembre 2026",
+ "motto": "« Les Pingouins tombent ensemble… et se relèvent ensemble. »",
+ "next": "Épisode 3 : Cosmo Taverny · dimanche 29 novembre · à l'extérieur",
  "music": {
   "file": "assets/music/run_toward_tomorrow.mp3",
   "start": 0
@@ -15,9 +18,93 @@
   "subtitle": "Le lob du Petit",
   "output": "couverture_E02.jpg"
  },
+ "caption": "Mené, revenu, devant grâce à un lob des 35 mètres… puis les corps lâchent. 🐧 Épisode 2 : Eaubonne.\n#LesPingouins #FootAmateur #Anime #FootballAnime #CDM",
+ "acts": [
+  {
+   "label": "Acte 1",
+   "title": "Le retour à la maison",
+   "from": 1
+  },
+  {
+   "label": "Acte 2",
+   "title": "Le terrain qui fuse",
+   "dark": true,
+   "from": 4
+  },
+  {
+   "label": "Acte 3",
+   "title": "Le plan de Tom",
+   "from": 6
+  },
+  {
+   "label": "Acte 4",
+   "title": "Le Petit et les autres",
+   "from": 10
+  },
+  {
+   "label": "Acte 5",
+   "title": "Les corps lâchent",
+   "dark": true,
+   "from": 13
+  },
+  {
+   "label": "Acte 6",
+   "title": "Ensemble",
+   "from": 15
+  }
+ ],
+ "prompts": [
+  {
+   "title": "N1 · plan 04 · le terrain qui fuse",
+   "note": "Fait ✓",
+   "text": "(déjà générée)"
+  },
+  {
+   "title": "N2 · plan 08 · la déviation de Tom",
+   "note": "Fait ✓",
+   "text": "(déjà générée)"
+  },
+  {
+   "title": "N3 · plan 09 · le but de Sam",
+   "note": "Sam portait le 6 dimanche.",
+   "text": "Modern Japanese sports anime style, clean cel shading, bold ink outlines, expressive eyes, dramatic lighting, rich saturated colors, subtle film grain, vertical 9:16 format, no text, no logos, no brand marks. Our team wears plain black football jerseys with white numbers on the chest, black shorts, black socks, no sponsor, no crest. Opponents wear plain dark red jerseys. Use exactly the face of SAMUEL (number 6) from the portrait I gave you earlier. At the far post, the opposing goalkeeper in a yellow jersey lies on the ground after parrying the ball. Samuel arrives at full speed out of nowhere, leaving several afterimages of himself and a trail of speed lines, and sweeps the rebound into the net, the net bulging. Teammates in black raise their arms in the background, faces not detailed. Explosive, joyful moment."
+  },
+  {
+   "title": "N4 · plans 01 et 11 · le lob d'Ayrton",
+   "note": null,
+   "text": "Modern Japanese sports anime style, clean cel shading, bold ink outlines, expressive eyes, dramatic lighting, rich saturated colors, subtle film grain, vertical 9:16 format, no text, no logos, no brand marks. Our team wears plain black football jerseys with white numbers on the chest, black shorts, black socks, no sponsor, no crest. Opponents wear plain dark red jerseys. Use exactly the face of AYRTON (number 13) from the portrait I gave you earlier. From 35 meters out, Ayrton has just struck the ball with perfect technique, body leaning back, kicking leg high. The ball flies in a high glowing golden arc toward the goal, far over a goalkeeper in yellow who backpedals desperately, far off his line. Wide shot from behind and slightly to the side of Ayrton so his face is visible in profile, light rays, epic slow-motion feeling."
+  },
+  {
+   "title": "N5 · plan 14 · Tom s'écroule",
+   "note": null,
+   "text": "Modern Japanese sports anime style, clean cel shading, bold ink outlines, expressive eyes, dramatic lighting, rich saturated colors, subtle film grain, vertical 9:16 format, no text, no logos, no brand marks. Our team wears plain black football jerseys with white numbers on the chest, black shorts, black socks, no sponsor, no crest. Opponents wear plain dark red jerseys. Use exactly the face of TOM (number 10) from the portrait I gave you earlier. Late in the match, Tom kneels on the wet pitch, one hand gripping the back of his thigh in pain, jaw clenched, steam rising from his shoulders. Around him, exhausted teammates in black bend over with hands on their knees, faces not detailed. In the far background, opponents in dark red celebrate a goal. Grey sky, desaturated colors, heavy tragic atmosphere."
+  },
+  {
+   "title": "N6 · plan 07 · les six mètres de Kevin",
+   "note": "Change le numéro si Kevin ne portait pas le 5.",
+   "text": "Modern Japanese sports anime style, clean cel shading, bold ink outlines, expressive eyes, dramatic lighting, rich saturated colors, subtle film grain, vertical 9:16 format, no text, no logos, no brand marks. Our team wears plain black football jerseys with white numbers on the chest, black shorts, black socks, no sponsor, no crest. Opponents wear plain dark red jerseys. Use exactly the face of KEVIN (number 5) from the portrait I gave you earlier. On a wet grass pitch, Kevin takes a goal kick from the six-yard box: powerful full-body swing, kicking leg extended high, mud and water exploding from the turf, the ball rocketing high toward the sky. Behind him, the goalkeeper in a green long-sleeve jersey with number 1 watches, face not detailed. Low heroic angle, speed lines, determined proud expression, slightly comic intensity, grey morning sky."
+  },
+  {
+   "title": "N7 · plan 10 · Vincent partout",
+   "note": "Vincent portait le 8 dimanche.",
+   "text": "Modern Japanese sports anime style, clean cel shading, bold ink outlines, expressive eyes, dramatic lighting, rich saturated colors, subtle film grain, vertical 9:16 format, no text, no logos, no brand marks. Our team wears plain black football jerseys with white numbers on the chest, black shorts, black socks, no sponsor, no crest. Opponents wear plain dark red jerseys. Use exactly the face of VINCENT (number 8) from the portrait I gave you earlier. In midfield on a wet pitch, Vincent wins the ball with a hard, clean sliding tackle against an opponent in dark red. Around him, several translucent afterimages of Vincent running left and right across the midfield show that he is everywhere at once. Mud and water spray, speed lines, fierce determined expression, dynamic wide angle, grey morning sky."
+  },
+  {
+   "title": "N8 · plan 16 · les treize, ensemble",
+   "note": "Visages petits et non détaillés : c'est le groupe qui compte.",
+   "text": "Modern Japanese sports anime style, clean cel shading, bold ink outlines, expressive eyes, dramatic lighting, rich saturated colors, subtle film grain, vertical 9:16 format, no text, no logos, no brand marks. Our team wears plain black football jerseys with white numbers on the chest, black shorts, black socks, no sponsor, no crest. Opponents wear plain dark red jerseys. At the end of the match, thirteen teammates stand together in a line on the soaked pitch in light rain, arms around each other's shoulders, exhausted but united, heads high. The goalkeeper in a green long-sleeve jersey with number 1 stands among them. Visible jersey numbers on the black shirts: 12, 4, 5, 3, 17, 6, 8, 10, 13, 7, 11, 15. Some are limping and held up by teammates, one has an ice pack strapped to his thigh. Wide shot from the front, faces small and not detailed, golden light breaking through grey clouds behind them, emotional and heroic."
+  },
+  {
+   "title": "N9 · plan 13 · l'infirmerie affiche complet",
+   "note": "Pas de portrait de Selba : il est de profil, visage caché.",
+   "text": "Modern Japanese sports anime style, clean cel shading, bold ink outlines, expressive eyes, dramatic lighting, rich saturated colors, subtle film grain, vertical 9:16 format, no text, no logos, no brand marks. Our team wears plain black football jerseys with white numbers on the chest, black shorts, black socks, no sponsor, no crest. Opponents wear plain dark red jerseys. Use exactly the face of ERWANN (number 17) from the portrait I gave you earlier. Comic anime scene on the substitutes' bench beside a wet pitch: Erwann, number 17, sits with an ice pack on the back of his thigh, and next to him a teammate in black with number 15, seen in profile with his face hidden in his hands, holds an ice pack on his knee. Both have exaggerated comic despair: anime tear streams, a dark gloomy aura above their heads, an open first-aid kit between them. Grey sky, humorous mood."
+  }
+ ],
  "plans": [
   {
    "image": "N4.jpg",
+   "kind": "new",
+   "screen": "Le ballon d'Ayrton monte en cloche au-dessus d'un gardien qui recule (image N4).",
    "lines": [
     "Trente-cinq mètres…",
     "Le Petit vient de lober le gardien.",
@@ -28,6 +115,8 @@
   },
   {
    "image": "assets/pilot/17.jpg",
+   "kind": "reuse",
+   "screen": "Précédemment : l'équipe en cercle sous le soleil (pilote 17).",
    "lines": [
     "Précédemment… menés à Saint-Leu,",
     "les Pingouins arrachent un 3 partout."
@@ -37,29 +126,35 @@
   },
   {
    "image": "assets/pilot/01.jpg",
+   "kind": "reuse",
+   "opts": {
+    "n": 1
+   },
+   "screen": "Le terrain du Haut à l'aube dans la brume (pilote 01).",
    "lines": [
     "22 novembre. Pierrelaye.",
     "Eaubonne vient défier les Pingouins… à la maison."
    ],
-   "voice": "[dramatic] Vingt-deux novembre. Pierrelaye. Eaubonne vient défier les Pingouins… à la maison.",
-   "opts": {
-    "n": 1
-   }
+   "voice": "[dramatic] Vingt-deux novembre. Pierrelaye. Eaubonne vient défier les Pingouins… à la maison."
   },
   {
    "image": "N1.jpg",
+   "kind": "new",
+   "opts": {
+    "shake": 1
+   },
+   "screen": "N1 · Terrain trempé, le ballon fuse, Sam (6) et Vincent (8) glissent face aux rouges.",
    "lines": [
     "Le terrain fuse. Le ballon glisse.",
     "Ils veulent ressortir court…",
     "et le bloc se coupe en deux."
    ],
-   "voice": "[tense] Le terrain fuse. Le ballon glisse. Ils veulent ressortir court… [short pause] et le bloc se coupe en deux.",
-   "opts": {
-    "shake": 1
-   }
+   "voice": "[tense] Le terrain fuse. Le ballon glisse. Ils veulent ressortir court… [short pause] et le bloc se coupe en deux."
   },
   {
    "image": "assets/pilot/15.jpg",
+   "kind": "reuse",
+   "screen": "Rappel d'Herblay : le coup franc au-dessus du mur (pilote 15). 0-1 à l'écran.",
    "lines": [
     "Et puis… un coup franc.",
     "Encore un.",
@@ -70,6 +165,8 @@
   },
   {
    "image": "assets/pilot/03.jpg",
+   "kind": "reuse",
+   "screen": "Tom, regard doré (pilote 03).",
    "lines": [
     "Tom change le plan.",
     "Tom : Dégagez sur moi !"
@@ -79,6 +176,8 @@
   },
   {
    "image": "N6.jpg",
+   "kind": "new",
+   "screen": "N6 · Kevin dégage un six mètres de toutes ses forces. « × 20 » à l'écran.",
    "lines": [
     "Kevin s'en charge.",
     "Un six mètres… puis deux… puis trois…",
@@ -90,6 +189,8 @@
   },
   {
    "image": "N2.jpg",
+   "kind": "new",
+   "screen": "N2 · Tom dévie de la tête, Thomas part dans la profondeur.",
    "lines": [
     "Et sur l'un d'eux… Tom dévie de la tête…",
     "Thomas s'envole dans la profondeur !"
@@ -99,6 +200,8 @@
   },
   {
    "image": "N3.jpg",
+   "kind": "new",
+   "screen": "N3 · Sam (6) surgit au second poteau et pousse le ballon au fond. 1-1 à l'écran.",
    "lines": [
     "Centre au second poteau. Le gardien repousse…",
     "mais Speedy a tout suivi.",
@@ -109,7 +212,23 @@
    "opts": {}
   },
   {
+   "image": "N7.jpg",
+   "kind": "new",
+   "screen": "N7 · Vincent (8) partout au milieu, en images rémanentes, il récupère le ballon. « PARTOUT » à l'écran.",
+   "lines": [
+    "Au milieu, Vincent est sur tous les fronts.",
+    "À droite… à gauche… il récupère tout.",
+    "!! PARTOUT",
+    "L'homme du dimanche porte le 8 aujourd'hui…",
+    "et il court pour trois."
+   ],
+   "voice": "[intense] Au milieu, Vincent est sur tous les fronts. [excited] À droite… à gauche… il récupère tout. [amused] L'homme du dimanche porte le 8 aujourd'hui… et il court pour trois.",
+   "opts": {}
+  },
+  {
    "image": "N4.jpg",
+   "kind": "new",
+   "screen": "N4 · Le lob d'Ayrton des 35 mètres. 2-1 à l'écran.",
    "lines": [
     "Deuxième mi-temps. Ayrton. Le Petit.",
     "Le plus jeune de l'équipage… et il n'a peur de rien.",
@@ -120,55 +239,96 @@
    "opts": {}
   },
   {
-   "image": "N5.jpg",
+   "image": "assets/portraits/jo_visage.jpg",
+   "kind": "reuse",
+   "opts": {
+    "n": 1
+   },
+   "screen": "Portrait de Jo le Chauve. « 21 km/h » à l'écran.",
+   "lines": [
+    "Devant, Jo le Chauve.",
+    "Pointe de vitesse enregistrée :",
+    "!! 21 km/h",
+    "D'habitude, il dépasse les 30.",
+    "Ce dimanche… il jouait avec une seule jambe."
+   ],
+   "voice": "[dramatic] Devant, Jo le Chauve. [serious] Pointe de vitesse enregistrée : vingt et un kilomètres-heure. [whispers] D'habitude, il dépasse les trente. [amused] Ce dimanche… il jouait avec une seule jambe."
+  },
+  {
+   "image": "N9.jpg",
+   "kind": "new",
+   "screen": "N9 · Selba (15) et Erwann (17) sur le banc avec des poches de glace, désespoir comique. « COMPLET » à l'écran.",
    "lines": [
     "Mais les corps lâchent.",
-    "Un claquage… puis un autre.",
-    "Tom lui-même s'écroule.",
+    "Sur le banc, Selba et Erwann.",
+    "Les deux entrent… les deux se blessent.",
+    "Selba en première mi-temps…",
+    "Erwann en deuxième, encore un claquage.",
+    "Ce dimanche, l'infirmerie affiche…",
+    "!! COMPLET"
+   ],
+   "voice": "[tense] Mais les corps lâchent. [amused] Sur le banc, Selba et Erwann. Les deux entrent… les deux se blessent. Selba en première mi-temps… Erwann en deuxième, encore un claquage. [laughs] Ce dimanche, l'infirmerie affiche complet.",
+   "opts": {}
+  },
+  {
+   "image": "N5.jpg",
+   "kind": "new",
+   "opts": {
+    "heart": 1
+   },
+   "screen": "N5 · Tom à genoux, la main à l'arrière de la cuisse ; au fond, l'adversaire célèbre. 2-3 à l'écran.",
+   "lines": [
+    "Et Tom lui-même s'écroule.",
     "Six dernières minutes… deux buts.",
     "!! 2-3"
    ],
-   "voice": "[tense] Mais les corps lâchent. Un claquage… puis un autre. Tom lui-même s'écroule. [sad] Six dernières minutes… deux buts. Deux à trois.",
-   "opts": {
-    "heart": 1
-   }
+   "voice": "[sad] Et Tom lui-même s'écroule. Six dernières minutes… deux buts. Deux à trois."
   },
   {
    "image": "assets/portraits/francois.jpg",
+   "kind": "reuse",
+   "opts": {
+    "n": 1
+   },
+   "screen": "François, le vétéran (portrait).",
    "lines": [
     "Sur le bord du terrain, François, le vétéran.",
     "Blessé… mais toujours là.",
     "Drapeau à la main, il fait la touche."
    ],
-   "voice": "[amused] Sur le bord du terrain, François, le vétéran. Blessé… mais toujours là. Drapeau à la main, il fait la touche.",
-   "opts": {
-    "n": 1
-   }
+   "voice": "[amused] Sur le bord du terrain, François, le vétéran. Blessé… mais toujours là. Drapeau à la main, il fait la touche."
   },
   {
-   "image": "assets/pilot/08.jpg",
+   "image": "N8.jpg",
+   "kind": "new",
+   "opts": {
+    "n": 1
+   },
+   "screen": "N8 · Les treize de dimanche, bras dessus bras dessous sous la pluie, épuisés mais unis.",
    "lines": [
     "Défaite. Mais personne n'a lâché.",
+    "Kilian, Fredo, Nico, Kevin,",
+    "Johnny, Erwann, Sam, Vincent,",
+    "Tom, Ayrton, Jo, Thomas, Selba.",
     "Les Pingouins tombent ensemble…",
     "et se relèvent ensemble."
    ],
-   "voice": "[proud] Défaite. Mais personne n'a lâché. [whispers] Les Pingouins tombent ensemble… et se relèvent ensemble.",
-   "opts": {
-    "n": 1
-   }
+   "voice": "[proud] Défaite. Mais personne n'a lâché. [dramatic] Kilian. Fredo. Nico. Kevin. Johnny. Erwann. Sam. Vincent. Tom. Ayrton. Jo. Thomas. Selba. [whispers] Les Pingouins tombent ensemble… et se relèvent ensemble."
   },
   {
    "image": "assets/pilot/18.jpg",
+   "kind": "reuse",
+   "opts": {
+    "n": 1
+   },
+   "screen": "Le stade de Pierrelaye au soleil (pilote 18). PROCHAIN CHAPITRE : COSMO TAVERNY · 29/11.",
    "lines": [
     "Prochain chapitre : Cosmo Taverny.",
     "Dimanche 29 novembre.",
     "Si t'as kiffé, like et abonne-toi.",
     "On se retrouve au prochain épisode."
    ],
-   "voice": "[dramatic] Prochain chapitre : Cosmo Taverny. Dimanche vingt-neuf novembre. [short pause] [excited] Si t'as kiffé, like et abonne-toi. [whispers] On se retrouve au prochain épisode.",
-   "opts": {
-    "n": 1
-   }
+   "voice": "[dramatic] Prochain chapitre : Cosmo Taverny. Dimanche vingt-neuf novembre. [short pause] [excited] Si t'as kiffé, like et abonne-toi. [whispers] On se retrouve au prochain épisode."
   }
  ]
 }

@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="fr"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Les Pingouins — Épisode 2 : Eaubonne</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Barlow:wght@400;500;600&family=Barlow+Condensed:wght@600;700;800&display=swap" rel="stylesheet">
+<style>
+/* Univers unique sombre : nuit d'anime, or du club, sous-titres jaunes comme sur TikTok.
+   Mise en page : en-tête, sélecteur de lecture, 4 actes en colonne, scènes en cartes. */
+:root{
+  color-scheme:dark;
+  --nuit:#0a0f1a;
+  --encre:#121a2b;
+  --bord:#26324a;
+  --or:#e8b84b;
+  --sous-titre:#ffe14d;
+  --craie:#eef1f6;
+  --doux:#9aa6bd;
+  --rouge:#e0483a;
+  --vert:#2d9b56;
+  --titre:"Bebas Neue","Arial Narrow",Impact,sans-serif;
+  --cond:"Barlow Condensed","Arial Narrow",sans-serif;
+  --corps:"Barlow",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{-webkit-text-size-adjust:100%}
+body{background:var(--nuit);color:var(--craie);font-family:var(--corps);font-size:16px;line-height:1.55}
+.page{max-width:980px;margin:0 auto;padding:0 16px 64px}
+
+header{position:relative;overflow:hidden;padding:44px 0 28px;text-align:center}
+header::before{content:"";position:absolute;inset:-40%;background:repeating-conic-gradient(from 0deg at 50% 60%,rgba(232,184,75,.07) 0deg 2deg,transparent 2deg 9deg);pointer-events:none}
+.kicker{position:relative;font-family:var(--cond);font-weight:700;letter-spacing:.22em;text-transform:uppercase;color:var(--or);font-size:13px}
+h1{position:relative;font-family:var(--titre);font-weight:400;font-size:clamp(52px,13vw,104px);line-height:.92;letter-spacing:.02em;margin:8px 0 10px;text-wrap:balance}
+h1 span{color:var(--or)}
+.devise{position:relative;font-family:var(--cond);font-weight:700;font-size:clamp(18px,4.4vw,24px);color:var(--sous-titre);text-shadow:0 0 1px #000,0 2px 0 #000,2px 0 0 #000,-2px 0 0 #000,0 -2px 0 #000}
+.stats{position:relative;display:flex;justify-content:center;flex-wrap:wrap;gap:8px;margin-top:20px}
+.stat{border:1px solid var(--bord);background:rgba(18,26,43,.8);border-radius:999px;padding:6px 14px;font-family:var(--cond);font-weight:600;font-size:14px;color:var(--doux);font-variant-numeric:tabular-nums}
+.stat b{color:var(--craie);font-weight:700}
+
+.mode{position:sticky;top:0;z-index:5;background:linear-gradient(var(--nuit) 75%,rgba(10,15,26,0));padding:12px 0 16px;display:flex;justify-content:center}
+.seg{display:inline-flex;border:1px solid var(--bord);border-radius:999px;background:var(--encre);padding:4px;gap:4px}
+.seg button{font-family:var(--cond);font-weight:700;font-size:15px;letter-spacing:.04em;color:var(--doux);background:transparent;border:0;border-radius:999px;min-height:40px;padding:0 16px;cursor:pointer}
+.seg button[aria-pressed="true"]{background:var(--or);color:#1b1405}
+.seg button:focus-visible{outline:2px solid var(--sous-titre);outline-offset:2px}
+
+.acte{margin-top:36px}
+.acte-tete{display:flex;align-items:baseline;gap:12px;border-bottom:2px solid var(--or);padding-bottom:8px;margin-bottom:16px}
+.acte-num{font-family:var(--titre);font-size:20px;color:var(--or);letter-spacing:.08em;white-space:nowrap}
+.acte h2{font-family:var(--titre);font-weight:400;font-size:clamp(30px,7vw,42px);letter-spacing:.03em;line-height:1}
+.acte.sombre .acte-tete{border-color:var(--rouge)}
+.acte.sombre .acte-num{color:var(--rouge)}
+
+.scenes{display:flex;flex-direction:column;gap:12px}
+.scene{display:grid;grid-template-columns:72px minmax(0,1fr) minmax(0,1fr);border:1px solid var(--bord);border-radius:14px;background:var(--encre);overflow:hidden}
+.num{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:6px;background:#0d1422;border-right:1px solid var(--bord);padding:12px 6px}
+.num strong{font-family:var(--titre);font-weight:400;font-size:30px;line-height:1;color:var(--craie);font-variant-numeric:tabular-nums}
+.tag{font-family:var(--cond);font-weight:700;font-size:11px;letter-spacing:.06em;text-transform:uppercase;border-radius:999px;padding:2px 8px;white-space:nowrap}
+.tag.fixe{background:#1d2a42;color:var(--doux)}
+.tag.veo{background:var(--or);color:#1b1405}
+.tag.carte{background:#2a1f3d;color:#cdb8ff}
+.vu,.vo{padding:14px 16px}
+.lab{font-family:var(--cond);font-weight:700;font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--doux);margin-bottom:6px}
+.vu p{color:#cfd6e4;font-size:15px}
+.vo{background:#05070d;border-left:1px solid var(--bord)}
+.vo p{font-family:var(--cond);font-weight:700;font-size:19px;line-height:1.35;color:var(--sous-titre);text-shadow:0 0 1px #000,0 2px 0 #000,2px 0 0 #000,-2px 0 0 #000,0 -2px 0 #000}
+.cri{display:inline-block;margin-top:10px;background:var(--craie);color:#0a0f1a;font-family:var(--titre);font-size:22px;letter-spacing:.04em;padding:2px 12px;border-radius:12px 12px 12px 2px;transform:rotate(-2deg)}
+.nom{display:flex;flex-wrap:wrap;align-items:baseline;gap:4px 10px;margin-bottom:6px}
+.nom b{font-family:var(--titre);font-weight:400;font-size:34px;line-height:1;letter-spacing:.03em;color:var(--craie)}
+.nom i{font-style:normal;font-family:var(--cond);font-weight:700;font-size:15px;color:var(--or);text-transform:uppercase;letter-spacing:.06em}
+.scene.carte{border-color:#3a2d55}
+
+body[data-mode="vo"] .vu,body[data-mode="vo"] .num .tag{display:none}
+body[data-mode="vo"] .scene{grid-template-columns:72px minmax(0,1fr)}
+body[data-mode="vo"] .vo{border-left:0}
+body[data-mode="vu"] .vo{display:none}
+body[data-mode="vu"] .scene{grid-template-columns:72px minmax(0,1fr)}
+
+.fin{margin-top:40px;text-align:center;border:1px dashed var(--bord);border-radius:14px;padding:22px 16px;color:var(--doux);font-size:15px}
+.fin strong{display:block;font-family:var(--titre);font-weight:400;font-size:30px;color:var(--or);letter-spacing:.04em;margin-bottom:4px}
+
+@media (max-width:640px){
+  .scene,body[data-mode] .scene{grid-template-columns:56px minmax(0,1fr)}
+  .num{grid-row:span 2}
+  .num strong{font-size:24px}
+  .vo{border-left:0;border-top:1px solid var(--bord)}
+  body[data-mode="vo"] .vo,body[data-mode="vu"] .vu{border-top:0}
+  body[data-mode] .num{grid-row:auto}
+  body[data-mode="tout"] .num{grid-row:span 2}
+  .vo p{font-size:18px}
+}
+@media (prefers-reduced-motion:reduce){*{scroll-behavior:auto}}
+
+.bloc{margin-top:40px}
+.bloc h2{font-family:var(--titre);font-weight:400;font-size:clamp(30px,7vw,42px);letter-spacing:.03em;border-bottom:2px solid var(--or);padding-bottom:8px;margin-bottom:16px}
+.bloc p.intro{color:var(--doux);font-size:15px;margin-bottom:14px}
+.prompt{border:1px solid var(--bord);border-radius:14px;background:var(--encre);margin-bottom:12px;overflow:hidden}
+.ptete{display:flex;justify-content:space-between;align-items:center;gap:12px;padding:12px 14px;border-bottom:1px solid var(--bord)}
+.ptete b{display:block;font-family:var(--cond);font-weight:700;font-size:17px}
+.ptete span{display:block;color:var(--or);font-size:13px;font-family:var(--cond);font-weight:600}
+.copy{flex:none;font-family:var(--cond);font-weight:700;font-size:14px;background:var(--or);color:#1b1405;border:0;border-radius:999px;min-height:40px;padding:0 16px;cursor:pointer}
+.copy:focus-visible{outline:2px solid var(--sous-titre);outline-offset:2px}
+.prompt pre{white-space:pre-wrap;word-break:break-word;font:14px/1.5 ui-monospace,SFMono-Regular,Menlo,monospace;color:#cfd6e4;padding:14px;margin:0;background:#05070d}
+.tag.reuse{background:#173527;color:#8fe0ae}
+.rappel{margin-top:12px;border:1px dashed var(--or);border-radius:12px;padding:12px 14px;color:var(--craie);font-size:15px}
+</style></head>
+<body data-mode="tout"><div class="page">
+<header><div class="kicker">FC Pierrelaye CDM · J5 · dimanche 22 novembre 2026</div>
+<h1>Épisode 2<br><span>Eaubonne</span></h1>
+<p class="devise">« Les Pingouins tombent ensemble… et se relèvent ensemble. »</p>
+<div class="stats"><span class="stat"><b>17</b> plans</span><span class="stat"><b>9</b> nouvelles images</span>
+<span class="stat">≈ <b>2 min 05</b></span></div></header>
+<nav class="mode" aria-label="Mode de lecture"><div class="seg" role="group">
+<button type="button" data-m="tout" aria-pressed="true">Tout</button><button type="button" data-m="vo" aria-pressed="false">Voix off</button>
+<button type="button" data-m="vu" aria-pressed="false">À l'écran</button></div></nav>
+<main><section class="acte"><div class="acte-tete"><span class="acte-num">Acte 1</span><h2>Le retour à la maison</h2></div><div class="scenes"><article class="scene"><div class="num"><strong>01</strong><span class="tag fixe">Nouvelle image</span></div><div class="vu"><div class="lab">À l'écran</div><p>Le ballon d&#x27;Ayrton monte en cloche au-dessus d&#x27;un gardien qui recule (image N4).</p></div><div class="vo"><div class="lab">Voix off</div><p>Trente-cinq mètres… Le Petit vient de lober le gardien. Mais ce dimanche… un miracle ne suffira pas.</p></div></article><article class="scene"><div class="num"><strong>02</strong><span class="tag reuse">Image réutilisée</span></div><div class="vu"><div class="lab">À l'écran</div><p>Précédemment : l&#x27;équipe en cercle sous le soleil (pilote 17).</p></div><div class="vo"><div class="lab">Voix off</div><p>Précédemment… menés à Saint-Leu, les Pingouins arrachent un trois partout.</p></div></article><article class="scene"><div class="num"><strong>03</strong><span class="tag reuse">Image réutilisée</span></div><div class="vu"><div class="lab">À l'écran</div><p>Le terrain du Haut à l&#x27;aube dans la brume (pilote 01).</p></div><div class="vo"><div class="lab">Voix off</div><p>Vingt-deux novembre. Pierrelaye. Eaubonne vient défier les Pingouins… à la maison.</p></div></article></div></section><section class="acte sombre"><div class="acte-tete"><span class="acte-num">Acte 2</span><h2>Le terrain qui fuse</h2></div><div class="scenes"><article class="scene"><div class="num"><strong>04</strong><span class="tag fixe">Nouvelle image</span></div><div class="vu"><div class="lab">À l'écran</div><p>N1 · Terrain trempé, le ballon fuse, Sam (6) et Vincent (8) glissent face aux rouges.</p></div><div class="vo"><div class="lab">Voix off</div><p>Le terrain fuse. Le ballon glisse. Ils veulent ressortir court… et le bloc se coupe en deux.</p></div></article><article class="scene"><div class="num"><strong>05</strong><span class="tag reuse">Image réutilisée</span></div><div class="vu"><div class="lab">À l'écran</div><p>Rappel d&#x27;Herblay : le coup franc au-dessus du mur (pilote 15). 0-1 à l&#x27;écran.</p></div><div class="vo"><div class="lab">Voix off</div><p>Et puis… un coup franc. Encore un. Zéro à un.</p></div></article></div></section><section class="acte"><div class="acte-tete"><span class="acte-num">Acte 3</span><h2>Le plan de Tom</h2></div><div class="scenes"><article class="scene"><div class="num"><strong>06</strong><span class="tag reuse">Image réutilisée</span></div><div class="vu"><div class="lab">À l'écran</div><p>Tom, regard doré (pilote 03).</p></div><div class="vo"><div class="lab">Voix off</div><p>Tom change le plan. Dégagez sur moi !</p></div></article><article class="scene"><div class="num"><strong>07</strong><span class="tag fixe">Nouvelle image</span></div><div class="vu"><div class="lab">À l'écran</div><p>N6 · Kevin dégage un six mètres de toutes ses forces. « × 20 » à l&#x27;écran.</p></div><div class="vo"><div class="lab">Voix off</div><p>Kevin s&#x27;en charge. Un six mètres… puis deux… puis trois… Une vingtaine dans le match. Le Soldat absolu a même la jambe absolue.</p></div></article><article class="scene"><div class="num"><strong>08</strong><span class="tag fixe">Nouvelle image</span></div><div class="vu"><div class="lab">À l'écran</div><p>N2 · Tom dévie de la tête, Thomas part dans la profondeur.</p></div><div class="vo"><div class="lab">Voix off</div><p>Et sur l&#x27;un d&#x27;eux… Tom dévie de la tête… Thomas s&#x27;envole dans la profondeur !</p></div></article><article class="scene"><div class="num"><strong>09</strong><span class="tag fixe">Nouvelle image</span></div><div class="vu"><div class="lab">À l'écran</div><p>N3 · Sam (6) surgit au second poteau et pousse le ballon au fond. 1-1 à l&#x27;écran.</p></div><div class="vo"><div class="lab">Voix off</div><p>Centre au second poteau. Le gardien repousse… mais Speedy a tout suivi. Personne ne l&#x27;a vu passer. Un partout !</p></div></article></div></section><section class="acte"><div class="acte-tete"><span class="acte-num">Acte 4</span><h2>Le Petit et les autres</h2></div><div class="scenes"><article class="scene"><div class="num"><strong>10</strong><span class="tag fixe">Nouvelle image</span></div><div class="vu"><div class="lab">À l'écran</div><p>N7 · Vincent (8) partout au milieu, en images rémanentes, il récupère le ballon. « PARTOUT » à l&#x27;écran.</p></div><div class="vo"><div class="lab">Voix off</div><p>Au milieu, Vincent est sur tous les fronts. À droite… à gauche… il récupère tout. L&#x27;homme du dimanche porte le 8 aujourd&#x27;hui… et il court pour trois.</p></div></article><article class="scene"><div class="num"><strong>11</strong><span class="tag fixe">Nouvelle image</span></div><div class="vu"><div class="lab">À l'écran</div><p>N4 · Le lob d&#x27;Ayrton des 35 mètres. 2-1 à l&#x27;écran.</p></div><div class="vo"><div class="lab">Voix off</div><p>Deuxième mi-temps. Ayrton. Le Petit. Le plus jeune de l&#x27;équipage… et il n&#x27;a peur de rien. Trente-cinq mètres. Lob. Deux à un !</p></div></article><article class="scene"><div class="num"><strong>12</strong><span class="tag reuse">Image réutilisée</span></div><div class="vu"><div class="lab">À l'écran</div><p>Portrait de Jo le Chauve. « 21 km/h » à l&#x27;écran.</p></div><div class="vo"><div class="lab">Voix off</div><p>Devant, Jo le Chauve. Pointe de vitesse enregistrée : vingt et un kilomètres-heure. D&#x27;habitude, il dépasse les trente. Ce dimanche… il jouait avec une seule jambe.</p></div></article></div></section><section class="acte sombre"><div class="acte-tete"><span class="acte-num">Acte 5</span><h2>Les corps lâchent</h2></div><div class="scenes"><article class="scene"><div class="num"><strong>13</strong><span class="tag fixe">Nouvelle image</span></div><div class="vu"><div class="lab">À l'écran</div><p>N9 · Selba (15) et Erwann (17) sur le banc avec des poches de glace, désespoir comique. « COMPLET » à l&#x27;écran.</p></div><div class="vo"><div class="lab">Voix off</div><p>Mais les corps lâchent. Sur le banc, Selba et Erwann. Les deux entrent… les deux se blessent. Selba en première mi-temps… Erwann en deuxième, encore un claquage. Ce dimanche, l&#x27;infirmerie affiche complet.</p></div></article><article class="scene"><div class="num"><strong>14</strong><span class="tag fixe">Nouvelle image</span></div><div class="vu"><div class="lab">À l'écran</div><p>N5 · Tom à genoux, la main à l&#x27;arrière de la cuisse ; au fond, l&#x27;adversaire célèbre. 2-3 à l&#x27;écran.</p></div><div class="vo"><div class="lab">Voix off</div><p>Et Tom lui-même s&#x27;écroule. Six dernières minutes… deux buts. Deux à trois.</p></div></article></div></section><section class="acte"><div class="acte-tete"><span class="acte-num">Acte 6</span><h2>Ensemble</h2></div><div class="scenes"><article class="scene"><div class="num"><strong>15</strong><span class="tag reuse">Image réutilisée</span></div><div class="vu"><div class="lab">À l'écran</div><p>François, le vétéran (portrait).</p></div><div class="vo"><div class="lab">Voix off</div><p>Sur le bord du terrain, François, le vétéran. Blessé… mais toujours là. Drapeau à la main, il fait la touche.</p></div></article><article class="scene"><div class="num"><strong>16</strong><span class="tag fixe">Nouvelle image</span></div><div class="vu"><div class="lab">À l'écran</div><p>N8 · Les treize de dimanche, bras dessus bras dessous sous la pluie, épuisés mais unis.</p></div><div class="vo"><div class="lab">Voix off</div><p>Défaite. Mais personne n&#x27;a lâché. Kilian. Fredo. Nico. Kevin. Johnny. Erwann. Sam. Vincent. Tom. Ayrton. Jo. Thomas. Selba. Les Pingouins tombent ensemble… et se relèvent ensemble.</p></div></article><article class="scene"><div class="num"><strong>17</strong><span class="tag reuse">Image réutilisée</span></div><div class="vu"><div class="lab">À l'écran</div><p>Le stade de Pierrelaye au soleil (pilote 18). PROCHAIN CHAPITRE : COSMO TAVERNY · 29/11.</p></div><div class="vo"><div class="lab">Voix off</div><p>Prochain chapitre : Cosmo Taverny. Dimanche vingt-neuf novembre.  Si t&#x27;as kiffé, like et abonne-toi. On se retrouve au prochain épisode.</p></div></article></div></section></main>
+<section class="bloc"><h2>Les 9 nouvelles images · Gemini</h2>
+<p class="intro">À coller une par une dans ta conversation Gemini qui a les portraits. Nomme-les N1, N2… et envoie-les-moi. Les autres plans reprennent des images existantes.</p><div class="prompt"><div class="ptete"><div><b>N1 · plan 04 · le terrain qui fuse</b><span>Fait ✓</span></div><button type="button" class="copy" data-t="p0">Copier</button></div><pre id="p0">(déjà générée)</pre></div><div class="prompt"><div class="ptete"><div><b>N2 · plan 08 · la déviation de Tom</b><span>Fait ✓</span></div><button type="button" class="copy" data-t="p1">Copier</button></div><pre id="p1">(déjà générée)</pre></div><div class="prompt"><div class="ptete"><div><b>N3 · plan 09 · le but de Sam</b><span>Sam portait le 6 dimanche.</span></div><button type="button" class="copy" data-t="p2">Copier</button></div><pre id="p2">Modern Japanese sports anime style, clean cel shading, bold ink outlines, expressive eyes, dramatic lighting, rich saturated colors, subtle film grain, vertical 9:16 format, no text, no logos, no brand marks. Our team wears plain black football jerseys with white numbers on the chest, black shorts, black socks, no sponsor, no crest. Opponents wear plain dark red jerseys. Use exactly the face of SAMUEL (number 6) from the portrait I gave you earlier. At the far post, the opposing goalkeeper in a yellow jersey lies on the ground after parrying the ball. Samuel arrives at full speed out of nowhere, leaving several afterimages of himself and a trail of speed lines, and sweeps the rebound into the net, the net bulging. Teammates in black raise their arms in the background, faces not detailed. Explosive, joyful moment.</pre></div><div class="prompt"><div class="ptete"><div><b>N4 · plans 01 et 11 · le lob d&#x27;Ayrton</b></div><button type="button" class="copy" data-t="p3">Copier</button></div><pre id="p3">Modern Japanese sports anime style, clean cel shading, bold ink outlines, expressive eyes, dramatic lighting, rich saturated colors, subtle film grain, vertical 9:16 format, no text, no logos, no brand marks. Our team wears plain black football jerseys with white numbers on the chest, black shorts, black socks, no sponsor, no crest. Opponents wear plain dark red jerseys. Use exactly the face of AYRTON (number 13) from the portrait I gave you earlier. From 35 meters out, Ayrton has just struck the ball with perfect technique, body leaning back, kicking leg high. The ball flies in a high glowing golden arc toward the goal, far over a goalkeeper in yellow who backpedals desperately, far off his line. Wide shot from behind and slightly to the side of Ayrton so his face is visible in profile, light rays, epic slow-motion feeling.</pre></div><div class="prompt"><div class="ptete"><div><b>N5 · plan 14 · Tom s&#x27;écroule</b></div><button type="button" class="copy" data-t="p4">Copier</button></div><pre id="p4">Modern Japanese sports anime style, clean cel shading, bold ink outlines, expressive eyes, dramatic lighting, rich saturated colors, subtle film grain, vertical 9:16 format, no text, no logos, no brand marks. Our team wears plain black football jerseys with white numbers on the chest, black shorts, black socks, no sponsor, no crest. Opponents wear plain dark red jerseys. Use exactly the face of TOM (number 10) from the portrait I gave you earlier. Late in the match, Tom kneels on the wet pitch, one hand gripping the back of his thigh in pain, jaw clenched, steam rising from his shoulders. Around him, exhausted teammates in black bend over with hands on their knees, faces not detailed. In the far background, opponents in dark red celebrate a goal. Grey sky, desaturated colors, heavy tragic atmosphere.</pre></div><div class="prompt"><div class="ptete"><div><b>N6 · plan 07 · les six mètres de Kevin</b><span>Change le numéro si Kevin ne portait pas le 5.</span></div><button type="button" class="copy" data-t="p5">Copier</button></div><pre id="p5">Modern Japanese sports anime style, clean cel shading, bold ink outlines, expressive eyes, dramatic lighting, rich saturated colors, subtle film grain, vertical 9:16 format, no text, no logos, no brand marks. Our team wears plain black football jerseys with white numbers on the chest, black shorts, black socks, no sponsor, no crest. Opponents wear plain dark red jerseys. Use exactly the face of KEVIN (number 5) from the portrait I gave you earlier. On a wet grass pitch, Kevin takes a goal kick from the six-yard box: powerful full-body swing, kicking leg extended high, mud and water exploding from the turf, the ball rocketing high toward the sky. Behind him, the goalkeeper in a green long-sleeve jersey with number 1 watches, face not detailed. Low heroic angle, speed lines, determined proud expression, slightly comic intensity, grey morning sky.</pre></div><div class="prompt"><div class="ptete"><div><b>N7 · plan 10 · Vincent partout</b><span>Vincent portait le 8 dimanche.</span></div><button type="button" class="copy" data-t="p6">Copier</button></div><pre id="p6">Modern Japanese sports anime style, clean cel shading, bold ink outlines, expressive eyes, dramatic lighting, rich saturated colors, subtle film grain, vertical 9:16 format, no text, no logos, no brand marks. Our team wears plain black football jerseys with white numbers on the chest, black shorts, black socks, no sponsor, no crest. Opponents wear plain dark red jerseys. Use exactly the face of VINCENT (number 8) from the portrait I gave you earlier. In midfield on a wet pitch, Vincent wins the ball with a hard, clean sliding tackle against an opponent in dark red. Around him, several translucent afterimages of Vincent running left and right across the midfield show that he is everywhere at once. Mud and water spray, speed lines, fierce determined expression, dynamic wide angle, grey morning sky.</pre></div><div class="prompt"><div class="ptete"><div><b>N8 · plan 16 · les treize, ensemble</b><span>Visages petits et non détaillés : c&#x27;est le groupe qui compte.</span></div><button type="button" class="copy" data-t="p7">Copier</button></div><pre id="p7">Modern Japanese sports anime style, clean cel shading, bold ink outlines, expressive eyes, dramatic lighting, rich saturated colors, subtle film grain, vertical 9:16 format, no text, no logos, no brand marks. Our team wears plain black football jerseys with white numbers on the chest, black shorts, black socks, no sponsor, no crest. Opponents wear plain dark red jerseys. At the end of the match, thirteen teammates stand together in a line on the soaked pitch in light rain, arms around each other&#x27;s shoulders, exhausted but united, heads high. The goalkeeper in a green long-sleeve jersey with number 1 stands among them. Visible jersey numbers on the black shirts: 12, 4, 5, 3, 17, 6, 8, 10, 13, 7, 11, 15. Some are limping and held up by teammates, one has an ice pack strapped to his thigh. Wide shot from the front, faces small and not detailed, golden light breaking through grey clouds behind them, emotional and heroic.</pre></div><div class="prompt"><div class="ptete"><div><b>N9 · plan 13 · l&#x27;infirmerie affiche complet</b><span>Pas de portrait de Selba : il est de profil, visage caché.</span></div><button type="button" class="copy" data-t="p8">Copier</button></div><pre id="p8">Modern Japanese sports anime style, clean cel shading, bold ink outlines, expressive eyes, dramatic lighting, rich saturated colors, subtle film grain, vertical 9:16 format, no text, no logos, no brand marks. Our team wears plain black football jerseys with white numbers on the chest, black shorts, black socks, no sponsor, no crest. Opponents wear plain dark red jerseys. Use exactly the face of ERWANN (number 17) from the portrait I gave you earlier. Comic anime scene on the substitutes&#x27; bench beside a wet pitch: Erwann, number 17, sits with an ice pack on the back of his thigh, and next to him a teammate in black with number 15, seen in profile with his face hidden in his hands, holds an ice pack on his knee. Both have exaggerated comic despair: anime tear streams, a dark gloomy aura above their heads, an open first-aid kit between them. Grey sky, humorous mood.</pre></div></section>
+<section class="bloc"><h2>La voix off</h2><p class="intro">À coller en une seule génération. Garde les lignes vides entre les paragraphes : elles servent au découpage par plan.</p><div class="prompt"><div class="ptete"><div><b>Voix off complète · ElevenLabs</b><span>Fred - Radio Host · Eleven v4 · stabilité 30 · similarité 75 · Français · en une seule génération</span></div><button type="button" class="copy" data-t="p9">Copier</button></div><pre id="p9">[whispers] Trente-cinq mètres… [dramatic] Le Petit vient de lober le gardien. [serious] Mais ce dimanche… un miracle ne suffira pas.
+
+[mysterious] Précédemment… menés à Saint-Leu, les Pingouins arrachent un trois partout.
+
+[dramatic] Vingt-deux novembre. Pierrelaye. Eaubonne vient défier les Pingouins… à la maison.
+
+[tense] Le terrain fuse. Le ballon glisse. Ils veulent ressortir court… [short pause] et le bloc se coupe en deux.
+
+[serious] Et puis… un coup franc. [whispers] Encore un. [dramatic] Zéro à un.
+
+[determined] Tom change le plan. [shouting] Dégagez sur moi !
+
+[amused] Kevin s&#x27;en charge. Un six mètres… puis deux… puis trois… [laughs] Une vingtaine dans le match. [proud] Le Soldat absolu a même la jambe absolue.
+
+[excited] Et sur l&#x27;un d&#x27;eux… Tom dévie de la tête… Thomas s&#x27;envole dans la profondeur !
+
+[excited] Centre au second poteau. Le gardien repousse… [short pause] mais Speedy a tout suivi. Personne ne l&#x27;a vu passer. [shouting] Un partout !
+
+[intense] Au milieu, Vincent est sur tous les fronts. [excited] À droite… à gauche… il récupère tout. [amused] L&#x27;homme du dimanche porte le 8 aujourd&#x27;hui… et il court pour trois.
+
+[dramatic] Deuxième mi-temps. Ayrton. Le Petit. [whispers] Le plus jeune de l&#x27;équipage… et il n&#x27;a peur de rien. [intense] Trente-cinq mètres. Lob. [shouting] Deux à un !
+
+[dramatic] Devant, Jo le Chauve. [serious] Pointe de vitesse enregistrée : vingt et un kilomètres-heure. [whispers] D&#x27;habitude, il dépasse les trente. [amused] Ce dimanche… il jouait avec une seule jambe.
+
+[tense] Mais les corps lâchent. [amused] Sur le banc, Selba et Erwann. Les deux entrent… les deux se blessent. Selba en première mi-temps… Erwann en deuxième, encore un claquage. [laughs] Ce dimanche, l&#x27;infirmerie affiche complet.
+
+[sad] Et Tom lui-même s&#x27;écroule. Six dernières minutes… deux buts. Deux à trois.
+
+[amused] Sur le bord du terrain, François, le vétéran. Blessé… mais toujours là. Drapeau à la main, il fait la touche.
+
+[proud] Défaite. Mais personne n&#x27;a lâché. [dramatic] Kilian. Fredo. Nico. Kevin. Johnny. Erwann. Sam. Vincent. Tom. Ayrton. Jo. Thomas. Selba. [whispers] Les Pingouins tombent ensemble… et se relèvent ensemble.
+
+[dramatic] Prochain chapitre : Cosmo Taverny. Dimanche vingt-neuf novembre. [short pause] [excited] Si t&#x27;as kiffé, like et abonne-toi. [whispers] On se retrouve au prochain épisode.</pre></div></section>
+<section class="bloc"><h2>Publication</h2><div class="prompt"><div class="ptete"><div><b>Légende TikTok et Instagram</b></div><button type="button" class="copy" data-t="p10">Copier</button></div><pre id="p10">Mené, revenu, devant grâce à un lob des 35 mètres… puis les corps lâchent. 🐧 Épisode 2 : Eaubonne.
+#LesPingouins #FootAmateur #Anime #FootballAnime #CDM</pre></div><div class="rappel">Programme à 18h sur TikTok et Instagram, avec l'étiquette « Contenu généré par IA ».</div></section>
+<div class="fin"><strong>À suivre…</strong>Épisode 3 : Cosmo Taverny · dimanche 29 novembre · à l&#x27;extérieur<br>@lespingouinscdm</div>
+</div><script>(function(){
+var btns=document.querySelectorAll('.seg button');
+btns.forEach(function(b){b.addEventListener('click',function(){document.body.setAttribute('data-mode',b.dataset.m);
+btns.forEach(function(x){x.setAttribute('aria-pressed',String(x===b));});});});
+document.querySelectorAll('.copy').forEach(function(b){b.addEventListener('click',function(){
+var t=document.getElementById(b.dataset.t).textContent;
+function ok(){b.textContent='Copié ✓';setTimeout(function(){b.textContent='Copier';},1500);}
+function fb(){var ta=document.createElement('textarea');ta.value=t;document.body.appendChild(ta);ta.select();try{document.execCommand('copy');ok();}catch(x){}document.body.removeChild(ta);}
+if(navigator.clipboard&&navigator.clipboard.writeText){navigator.clipboard.writeText(t).then(ok,fb);}else fb();});});
+})();</script></body></html>

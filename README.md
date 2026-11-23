@@ -19,11 +19,14 @@ La bible de la série (équipage, surnoms validés, lignes rouges, saison, style
 python3 pingouins.py episode episodes/epNN/episode.json        # épisode avec voix off
 python3 pingouins.py short   episodes/epNN/short_mercredi.json # format court, musique seule
 python3 pingouins.py cover   episodes/epNN/episode.json        # couverture du Reel
+python3 page_episode.py      episodes/epNN/episode.json        # page de l'épisode pour Tom (page.html, à publier en artifact)
 ```
 
 Les vidéos et fichiers de travail ne sont pas versionnés (.gitignore). Les livrer avec SendUserFile.
 
 ## Format d'un épisode (`episode.json`)
+
+Voir episodes/ep02/episode.json comme modèle complet (champs de page : kicker, motto, next, caption, acts, prompts, plans[].screen, plans[].kind).
 
 ```json
 {
