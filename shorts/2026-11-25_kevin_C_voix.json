@@ -81,5 +81,12 @@
     "lines": true
    }
   }
- ]
+ ],
+ "cover": {
+  "image": "clips/kevin_cover.jpg",
+  "kicker": "JOUEUR DE LA SEMAINE",
+  "title": "Kevin",
+  "subtitle": "Flash spécial : 8 poumons",
+  "output": "couverture_Kevin.jpg"
+ }
 }
