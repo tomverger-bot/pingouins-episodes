@@ -56,7 +56,7 @@ def speaker_of(line):
     """« Tom : réplique » -> ('Tom', 'réplique'). Un seul mot avant « : », avec majuscule."""
     if ' : ' in line:
         sp, rest = line.split(' : ', 1)
-        if re.fullmatch(r"[A-ZÉÈ][\wéèêëàâîïôöûüç'-]{1,14}", sp): return sp, rest
+        if re.fullmatch(r"[A-ZÉÈ][\wéèêëàâîïôöûüç'-]{1,14}( [\wéèêëàâîïôöûüç'-]{1,14})?", sp): return sp, rest
     return None, line
 
 
@@ -89,10 +89,15 @@ def dur_of(kind, text):
     return max(0.85, d)
 
 
+TITLES = False  # formats courts « titres » : chaque ligne s'affiche entière, en grand
+
+
 def build(lines):
     items = []
     for ln in lines:
-        cs = chunks_of(ln)
+        if TITLES and not ln.startswith('!! '):
+            sp, t = speaker_of(ln); cs = [('dlg' if sp else 'sub', sp, t)]
+        else: cs = chunks_of(ln)
         for i, (k, sp, t) in enumerate(cs):
             items.append([k, sp, t, dur_of(k, t) + (0.2 if i == len(cs) - 1 else 0)])
     return items
@@ -104,7 +109,7 @@ def draw_sub(fr, k, sp, t):
         f = font(ANTON, 200 if len(t) <= 6 else 130)
         if sp: text_center(d, 650, sp.upper() + ' :', font(BARLOW, 60), WHITE)
         text_center(d, 760, t, f, YEL, stroke=12); return
-    FS = font(BARLOW, 66)
+    FS = font(BARLOW, 84 if TITLES else 66)
     txt = (sp + ' : ' + t) if sp else t
     lines = wrap(d, txt, FS, W - 240)
     y0 = 1330 - (len(lines) - 1) * 40
@@ -131,7 +136,7 @@ def video_frames(path, nfr, o):
     st, en = (o.get('clip') or [0, None]) + [None] * (2 - len(o.get('clip') or [0, None]))
     sp = o.get('speed', 1.0)
     vf = f'setpts=PTS/{sp},fps={FPS},scale={W}:{H}:force_original_aspect_ratio=increase,crop={W}:{H}'
-    cmd = ['ffmpeg', '-v', 'error', '-ss', str(st)] + (['-to', str(en)] if en else []) + ['-i', path, '-an', '-vf', vf,
+    cmd = ['ffmpeg', '-v', 'error', '-ss', str(st)] + (['-to', str(en)] if en else []) + ['-i', path, '-an', '-vf', vf, '-frames:v', str(nfr),
            '-f', 'rawvideo', '-pix_fmt', 'rgb24', '-']
     raw = subprocess.run(cmd, capture_output=True, check=True).stdout
     fs = [Image.frombytes('RGB', (W, H), raw[i:i + W * H * 3]) for i in range(0, len(raw) - W * H * 3 + 1, W * H * 3)]
@@ -501,7 +506,8 @@ def cmd_episode(spec_path):
 
 
 def cmd_short(spec_path):
-    spec = json.load(open(spec_path)); base = os.path.dirname(os.path.abspath(spec_path))
+    global TITLES
+    spec = json.load(open(spec_path)); TITLES = spec.get('style') == 'titles'; base = os.path.dirname(os.path.abspath(spec_path))
     work = os.path.join(base, 'work_' + os.path.splitext(os.path.basename(spec_path))[0]); os.makedirs(work, exist_ok=True)
     plans = spec['plans']; jobs, timeline, t = [], [], 0.0
     for i, p in enumerate(plans):
