@@ -1,0 +1,85 @@
+{
+ "title": "Joueur de la semaine : Kevin (faux reportage, voix off)",
+ "voice": "voix/kevin_C.mp3",
+ "output": "Kevin_C_reportage_voix.mp4",
+ "music": {
+  "file": "assets/music/run_toward_tomorrow.mp3",
+  "start": 51.9
+ },
+ "plans": [
+  {
+   "video": "clips/kevin_1.mp4",
+   "lines": [
+    "FLASH SPÉCIAL — Pierrelaye.",
+    "Un défenseur aurait été aperçu…"
+   ],
+   "voice": "[serious news anchor tone] Flash spécial, Pierrelaye. Un défenseur aurait été aperçu…",
+   "opts": {
+    "clip": [
+     0.3,
+     6
+    ]
+   }
+  },
+  {
+   "video": "clips/kevin_1.mp4",
+   "lines": [
+    "… avec huit poumons."
+   ],
+   "voice": "[dramatic pause] avec huit poumons.",
+   "opts": {
+    "clip": [
+     5.2,
+     10
+    ],
+    "lines": true
+   }
+  },
+  {
+   "video": "clips/kevin_2.mp4",
+   "lines": [
+    "Les témoins sont formels :",
+    "il n'a jamais lâché un coéquipier."
+   ],
+   "voice": "Les témoins sont formels : il n'a jamais lâché un coéquipier.",
+   "opts": {
+    "clip": [
+     1.0,
+     7
+    ],
+    "speed": 0.9
+   }
+  },
+  {
+   "video": "clips/kevin_3.mp4",
+   "lines": [
+    "Interrogé, il n'a prononcé que deux mots :",
+    "!! ON MONTE !"
+   ],
+   "voice": "Interrogé, il n'a prononcé que deux mots : [shouting] ON MONTE !",
+   "opts": {
+    "clip": [
+     0.0,
+     6
+    ],
+    "speed": 0.5
+   }
+  },
+  {
+   "video": "clips/kevin_3.mp4",
+   "lines": [
+    "L'enquête continue.",
+    "Chaque mercredi, un Pingouin à l'honneur.",
+    "@lespingouinscdm"
+   ],
+   "voice": "[deadpan] L'enquête continue. Chaque mercredi, un Pingouin à l'honneur.",
+   "opts": {
+    "clip": [
+     2.4,
+     10
+    ],
+    "lines": true
+   }
+  }
+ ]
+}
