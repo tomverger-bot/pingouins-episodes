@@ -1,0 +1,80 @@
+{
+ "type": "short",
+ "title": "Joueur de la semaine : Kevin (animé, bande-annonce)",
+ "output": "Les_Pingouins_joueur_Kevin_anime.mp4",
+ "music": {
+  "start": 51.9
+ },
+ "plans": [
+  {
+   "video": "clips/kevin_1.mp4",
+   "lines": [
+    "Dans un monde où les défenses reculent…",
+    "un homme refuse."
+   ],
+   "opts": {
+    "clip": [
+     0.3,
+     5
+    ]
+   }
+  },
+  {
+   "video": "clips/kevin_1.mp4",
+   "lines": [
+    "!! KEVIN",
+    "Le Soldat absolu."
+   ],
+   "opts": {
+    "clip": [
+     5.2,
+     10
+    ],
+    "lines": true
+   }
+  },
+  {
+   "video": "clips/kevin_2.mp4",
+   "lines": [
+    "Huit poumons.",
+    "Zéro trahison."
+   ],
+   "opts": {
+    "clip": [
+     1.3,
+     6
+    ],
+    "speed": 0.9
+   }
+  },
+  {
+   "video": "clips/kevin_3.mp4",
+   "lines": [
+    "Deux mots de vocabulaire.",
+    "!! ON MONTE !"
+   ],
+   "opts": {
+    "clip": [
+     0.1,
+     6
+    ],
+    "speed": 0.75
+   }
+  },
+  {
+   "video": "clips/kevin_3.mp4",
+   "lines": [
+    "Et toute la défense le suit.",
+    "Chaque mercredi, un Pingouin à l'honneur.",
+    "@lespingouinscdm"
+   ],
+   "opts": {
+    "clip": [
+     2.4,
+     10
+    ],
+    "lines": true
+   }
+  }
+ ]
+}
