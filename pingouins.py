@@ -125,6 +125,48 @@ def cover_img(path):
     return src.crop((l, t, l + W, t + H))
 
 
+
+def video_frames(path, nfr, o):
+    """Lit un clip (Gemini/Veo…) recadré en 1080x1920. o : clip [début, fin] en s, speed (0.5 = ralenti)."""
+    st, en = (o.get('clip') or [0, None]) + [None] * (2 - len(o.get('clip') or [0, None]))
+    sp = o.get('speed', 1.0)
+    vf = f'setpts=PTS/{sp},fps={FPS},scale={W}:{H}:force_original_aspect_ratio=increase,crop={W}:{H}'
+    cmd = ['ffmpeg', '-v', 'error', '-ss', str(st)] + (['-to', str(en)] if en else []) + ['-i', path, '-an', '-vf', vf,
+           '-f', 'rawvideo', '-pix_fmt', 'rgb24', '-']
+    raw = subprocess.run(cmd, capture_output=True, check=True).stdout
+    fs = [Image.frombytes('RGB', (W, H), raw[i:i + W * H * 3]) for i in range(0, len(raw) - W * H * 3 + 1, W * H * 3)]
+    if not fs: raise SystemExit('clip illisible : ' + path)
+    return [fs[min(i, len(fs) - 1)] for i in range(nfr)]
+
+
+def speed_lines(seed, cx=.5, cy=.45, n=70, inner=.32):
+    """Traits de vitesse façon manga, rayonnants depuis (cx, cy)."""
+    r = random.Random(seed); im = Image.new('RGBA', (W, H)); d = ImageDraw.Draw(im)
+    R = math.hypot(W, H)
+    for _ in range(n):
+        a = r.uniform(0, 2 * math.pi); r0 = R * r.uniform(inner, inner + .18); wd = r.uniform(.004, .012)
+        x0, y0 = cx * W + math.cos(a) * r0, cy * H + math.sin(a) * r0
+        pts = [(x0, y0), (cx * W + math.cos(a - wd) * R, cy * H + math.sin(a - wd) * R),
+               (cx * W + math.cos(a + wd) * R, cy * H + math.sin(a + wd) * R)]
+        d.polygon(pts, fill=(255, 255, 255, r.randint(120, 210)))
+    return im
+
+
+def draw_big_anim(fr, sp, t, age):
+    """Gros texte qui claque : arrive grossi, se pose en 5 images, léger tremblement."""
+    lay = Image.new('RGBA', (W, H)); d = ImageDraw.Draw(lay)
+    f = font(ANTON, 200 if len(t) <= 6 else 130)
+    if sp: text_center(d, 650, sp.upper() + ' :', font(BARLOW, 60), WHITE)
+    text_center(d, 760, t, f, YEL, stroke=12)
+    s = 1 + 0.7 * max(0, 1 - age / 5) ** 2
+    if s > 1.001:
+        big = lay.resize((round(W * s), round(H * s)), Image.BILINEAR)
+        l, tp = (big.width - W) // 2, round((big.height - H) * 0.45)
+        lay = big.crop((l, tp, l + W, tp + H))
+    jx = random.Random(age).randint(-8, 8) if age < 8 else 0
+    fr.alpha_composite(lay, (jx, 0))
+
+
 SHOTS = [(1.00, .5, .5), (1.32, .5, .36), (1.22, .5, .58), (1.40, .5, .42)]
 
 
@@ -132,11 +174,13 @@ def render_plan(job):
     """job : image, items [type, interlocuteur, texte, début_s], total_s, opts, out, idx, first, last."""
     o = job['opts']; items = job['items']; nfr = round(job['total'] * FPS); idx = job['idx']
     starts = [0] + [round(it[3] * FPS) for it in items[1:]]
-    base = cover_img(job['image'])
+    vids = video_frames(job['video'], nfr, o) if job.get('video') else None
+    base = cover_img(job['image']) if not vids else None
+    lines_cache = {}
     grad = Image.new('L', (1, H))
     for y in range(H): grad.putpixel((0, y), int(140 * max(0, (y - H * .6) / (H * .4)) ** 1.4))
     shade = Image.new('RGBA', (W, H), (0, 0, 0, 255)); shade.putalpha(grad.resize((W, H)))
-    nshots = 1 if o.get('n') else max(1, round(job['total'] / 2.4)); shot_len = nfr / nshots
+    nshots = 1 if (o.get('n') or vids) else max(1, round(job['total'] / 2.4)); shot_len = nfr / nshots
     flashes = [starts[i] for i, it in enumerate(items) if it[0] == 'big']
     rnd = random.Random(idx); order = [0] + [1 + ((idx + j) % 3) for j in range(nshots - 1)]
     tmp = job['out'] + '.tmp.mp4'
@@ -151,10 +195,22 @@ def render_plan(job):
         if o.get('shake'): dx, dy = rnd.uniform(-6, 6), rnd.uniform(-6, 6)
         a = 1 / z; px, py = cx * W + dx, cy * H + dy
         px = min(max(px, W * a / 2), W - W * a / 2); py = min(max(py, H * a / 2), H - H * a / 2)
-        fr = base.transform((W, H), Image.AFFINE, (a, 0, px - a * W / 2, 0, a, py - a * H / 2), resample=Image.BILINEAR).convert('RGBA')
-        fr.alpha_composite(shade)
         k = max(i for i in range(len(starts)) if starts[i] <= n)
-        draw_sub(fr, items[k][0], items[k][1], items[k][2])
+        age = n - starts[k]; hit = items[k][0] == 'big' and age < 7
+        if hit:  # impact : coup de zoom + secousse
+            z *= 1 + 0.10 * (1 - age / 7); r2 = random.Random(n); dx += r2.uniform(-14, 14); dy += r2.uniform(-14, 14)
+        src = vids[n] if vids else base
+        if vids:
+            a = 1 / (1 + 0.10 * (1 - age / 7)) if hit else 1 / (1 + o.get('zoom', 0.0) * q)
+            px, py = W / 2 + dx, H / 2 + dy
+        fr = src.transform((W, H), Image.AFFINE, (a, 0, px - a * W / 2, 0, a, py - a * H / 2), resample=Image.BILINEAR).convert('RGBA')
+        if o.get('lines') or (items[k][0] == 'big' and age < 14):
+            key = (n // 2) % 4
+            if key not in lines_cache: lines_cache[key] = speed_lines(idx * 10 + key)
+            fr.alpha_composite(lines_cache[key])
+        fr.alpha_composite(shade)
+        if items[k][0] == 'big': draw_big_anim(fr, items[k][1], items[k][2], age)
+        else: draw_sub(fr, items[k][0], items[k][1], items[k][2])
         fr = fr.convert('RGB')
         for fs in flashes:
             if fs <= n < fs + 8: fr = Image.blend(fr, Image.new('RGB', (W, H), (255, 255, 255)), 0.8 * (1 - (n - fs) / 8))
@@ -428,7 +484,7 @@ def cmd_episode(spec_path):
         lead = 0.55 if i == 0 else 0.12; tail = 2.2 if i == len(plans) - 1 else 0.30
         total = round((lead + a['dur'] + tail) * FPS) / FPS
         items = [[k, sp, tx, (lead + s - 0.04) if j else 0] for j, (k, sp, tx, s) in enumerate(a['items'])]
-        jobs.append({'image': resolve(base, p['image']), 'items': items, 'total': total, 'opts': p.get('opts', {}),
+        jobs.append({'image': resolve(base, p['image']) if p.get('image') else None, 'video': resolve(base, p['video']) if p.get('video') else None, 'items': items, 'total': total, 'opts': p.get('opts', {}),
                      'out': os.path.join(work, f'plan_{i + 1:02d}.mp4'), 'idx': i, 'first': i == 0, 'last': i == len(plans) - 1})
         timeline.append({'t0': t, 'dur': total, 'items': items, 'opts': p.get('opts', {})})
         vtrack.append((t + lead, a['wav'])); t += total
@@ -452,7 +508,7 @@ def cmd_short(spec_path):
         items = build(p['lines']); s = 0.0
         for it in items: d = it[3]; it[3] = s; s += d
         total = round((s + (1.2 if i == len(plans) - 1 else 0.1)) * FPS) / FPS
-        jobs.append({'image': resolve(base, p['image']), 'items': items, 'total': total, 'opts': p.get('opts', {}),
+        jobs.append({'image': resolve(base, p['image']) if p.get('image') else None, 'video': resolve(base, p['video']) if p.get('video') else None, 'items': items, 'total': total, 'opts': p.get('opts', {}),
                      'out': os.path.join(work, f'plan_{i + 1:02d}.mp4'), 'idx': i, 'first': i == 0, 'last': i == len(plans) - 1})
         timeline.append({'t0': t, 'dur': total, 'items': items, 'opts': p.get('opts', {})}); t += total
     render_all(jobs)
