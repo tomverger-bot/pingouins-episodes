@@ -1,0 +1,46 @@
+{
+ "type": "short",
+ "title": "Joueur de la semaine : Kevin (avec sa une)",
+ "output": "Les_Pingouins_joueur_Kevin.mp4",
+ "music": {
+  "start": 51.9
+ },
+ "plans": [
+  {
+   "image": "assets/portraits/kevin.jpg",
+   "lines": [
+    "Joueur de la semaine.",
+    "!! KEVIN",
+    "Le Soldat absolu."
+   ],
+   "opts": {}
+  },
+  {
+   "image": "assets/unes/kevin.jpg",
+   "lines": [
+    "Le Journal du District l'avait annoncé…"
+   ],
+   "opts": {
+    "n": 1
+   }
+  },
+  {
+   "image": "assets/pilot/07.jpg",
+   "lines": [
+    "Huit poumons. Pluie ou soleil, toujours là.",
+    "!! ON MONTE !"
+   ],
+   "opts": {}
+  },
+  {
+   "image": "assets/pilot/08.jpg",
+   "lines": [
+    "Chaque mercredi, un Pingouin à l'honneur.",
+    "@lespingouinscdm"
+   ],
+   "opts": {
+    "n": 1
+   }
+  }
+ ]
+}
